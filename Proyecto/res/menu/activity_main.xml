@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/MnuOpc1"></item>
+    <item android:id="@+id/MnuOpc2"></item>
+    <item android:id="@+id/MnuOpc3"></item>
+</menu>
