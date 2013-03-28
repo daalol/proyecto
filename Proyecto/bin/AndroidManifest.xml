@@ -23,6 +23,7 @@
         <!-- Añadiendo .javas a partir de aqui-->
         <activity android:name=".AcercaDe"></activity>
         <activity android:name=".InstruccionesDeUso"></activity>
+        <activity android:name=".MenuPrincipal"></activity>
     </application>
 
 </manifest>

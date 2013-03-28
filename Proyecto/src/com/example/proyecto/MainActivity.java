@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -13,6 +16,16 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        final Button boton_realizar= (Button)findViewById(R.id.boton_realizar);
+        boton_realizar.setOnClickListener(new OnClickListener(){
+        	public void onClick(View v){
+        		
+        		Intent intent1 = new Intent (MainActivity.this, MenuPrincipal.class);
+        	
+        		startActivity(intent1);
+        	}
+        });
     }
 
     @Override
@@ -27,8 +40,8 @@ public class MainActivity extends Activity {
         	finish(); //cierro la aplicacion
         	break;
         case R.id.MnuOpc2:
-        	//Intent intent2 = new Intent(MainActivity.this, componentes_de_seleccion.class );
-            //startActivity(intent2);
+        	Intent intent2 = new Intent(MainActivity.this, InstruccionesDeUso.class );
+            startActivity(intent2);
         	break;
         case R.id.MnuOpc3:
         	Intent intent3 = new Intent(MainActivity.this, AcercaDe.class );
