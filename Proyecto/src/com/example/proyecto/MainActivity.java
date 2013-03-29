@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case R.id.MnuOpc1: 
-        	finish(); //cierro la aplicacion
+        	System.exit(0); //cierro la aplicacion
         	break;
         case R.id.MnuOpc2:
         	Intent intent2 = new Intent(MainActivity.this, InstruccionesDeUso.class );

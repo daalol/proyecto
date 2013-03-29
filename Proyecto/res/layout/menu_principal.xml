@@ -5,7 +5,7 @@
     android:layout_height="fill_parent" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/seleccion_de_productos"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_x="1dp"
@@ -52,7 +52,7 @@
         android:text="Descripcion de productos y precios" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/enviar_al_camarero"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
