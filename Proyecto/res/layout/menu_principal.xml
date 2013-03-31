@@ -6,9 +6,9 @@
 
     <Button
         android:id="@+id/seleccion_de_productos"
-        android:layout_width="fill_parent"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
-        android:layout_x="1dp"
+        android:layout_x="0dp"
         android:layout_y="0dp"
         android:text="Seleccion de productos" />
 
@@ -26,30 +26,13 @@
             android:text="Borrar producto" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/borrar_todo"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="0.34"
             android:text="Borrar todo el pedido" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:layout_x="2dp"
-        android:layout_y="54dp"
-        android:text="Su pedido:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="fill_parent"
-        android:layout_height="296dp"
-        android:layout_x="0dp"
-        android:layout_y="80dp"
-        android:text="Descripcion de productos y precios" />
 
     <Button
         android:id="@+id/enviar_al_camarero"
@@ -58,5 +41,13 @@
         android:layout_x="0dp"
         android:layout_y="431dp"
         android:text="Enviar al camarero" />
+
+    <ListView
+        android:id="@+id/LstOpciones"
+        android:layout_width="fill_parent"
+        android:layout_height="326dp"
+        android:layout_x="-2dp"
+        android:layout_y="48dp" >
+    </ListView>
 
 </AbsoluteLayout>
