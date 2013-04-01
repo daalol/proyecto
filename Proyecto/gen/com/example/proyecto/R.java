@@ -25,9 +25,9 @@ public final class R {
         public static final int MnuOpc2=0x7f07000b;
         public static final int MnuOpc3=0x7f07000c;
         public static final int RelativeLayout1=0x7f070000;
+        public static final int borrar=0x7f070006;
         public static final int borrar_todo=0x7f070007;
         public static final int boton_realizar=0x7f070002;
-        public static final int button3=0x7f070006;
         public static final int enviar_al_camarero=0x7f070008;
         public static final int seleccion_de_productos=0x7f070005;
         public static final int volverAcerca=0x7f070001;
