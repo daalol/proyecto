@@ -4,11 +4,9 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -38,10 +36,10 @@ public class MenuPrincipal extends Activity{
         final Button seleccion_de_productos= (Button)findViewById(R.id.seleccion_de_productos);
         seleccion_de_productos.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		
-        		/*Intent intent1 = new Intent (MenuPrincipal.this, laclase.class);
+        		//Para poder probarlo
+        		Intent intent456 = new Intent (MenuPrincipal.this, SeleccionProductos.class);
         	
-        		startActivity(intent1);*/
+        		startActivity(intent456);
         	}
         });
         
@@ -77,10 +75,6 @@ public class MenuPrincipal extends Activity{
         		
         		dialogo.create();
         		dialogo.show();
-
-				
-        		//datos.remove(1);
-        	   // adaptador.notifyDataSetChanged(); 
         	}
         });
        

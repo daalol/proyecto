@@ -21,9 +21,9 @@ public class MainActivity extends Activity {
         boton_realizar.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		
-        		Intent intent1 = new Intent (MainActivity.this, MenuPrincipal.class);
+        		Intent deMainAMenuPrincipal = new Intent (MainActivity.this, MenuPrincipal.class);
         	
-        		startActivity(intent1);
+        		startActivity(deMainAMenuPrincipal);
         	}
         });
     }
