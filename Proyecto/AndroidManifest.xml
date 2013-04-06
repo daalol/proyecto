@@ -25,6 +25,7 @@
         <activity android:name=".InstruccionesDeUso"></activity>
         <activity android:name=".MenuPrincipal"></activity>
         <activity android:name=".SeleccionProductos"></activity>
+        <activity android:name=".Cafes"></activity>
     </application>
 
 </manifest>

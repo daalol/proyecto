@@ -36,10 +36,9 @@ public class MenuPrincipal extends Activity{
         final Button seleccion_de_productos= (Button)findViewById(R.id.seleccion_de_productos);
         seleccion_de_productos.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		//Para poder probarlo
-        		Intent intent456 = new Intent (MenuPrincipal.this, SeleccionProductos.class);
-        	
-        		startActivity(intent456);
+        		
+        		Intent deMenuPrincipalASeleccionProductos = new Intent (MenuPrincipal.this, SeleccionProductos.class);
+        		startActivity(deMenuPrincipalASeleccionProductos );
         	}
         });
         
