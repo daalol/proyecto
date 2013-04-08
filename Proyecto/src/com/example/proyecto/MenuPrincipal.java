@@ -15,18 +15,20 @@ import android.widget.ListView;
 
 public class MenuPrincipal extends Activity{
 	
+	final ArrayList<String> datos = new ArrayList<String>();
+	//ArrayAdapter<String> adaptador = new ArrayAdapter<String>(null, 0);
+	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_principal);
         
         //ListView donde veremos los productos elegidos
-        final ArrayList<String> datos = new ArrayList<String>();
+        
         datos.add("Aqui veras los productos elegidos");
-        	 
-        	final ArrayAdapter<String> adaptador =
+        final ArrayAdapter<String> adaptador =
         	    new ArrayAdapter<String>(this,
-        	        android.R.layout.simple_list_item_1, datos);
-        	 
+        	        android.R.layout.simple_list_item_1, datos);	 
+        
         	final ListView lstOpciones = (ListView)findViewById(R.id.LstOpciones);
         	lstOpciones.setAdapter(adaptador);
         //fin listView
@@ -65,7 +67,7 @@ public class MenuPrincipal extends Activity{
         		final CharSequence[] cs = datos.toArray(new CharSequence[datos.size()]);
         		 dialogo.setItems(cs, new DialogInterface.OnClickListener() {
         		        public void onClick(DialogInterface dialog, int item) {
-        		            //Log.i("Dialogos", "Opción elegida: " + cs[item]);
+        		           
         		        	datos.remove(item);
         		        	adaptador.notifyDataSetChanged();//actualizo los cambios en la lista
         		            dialog.cancel();
@@ -90,5 +92,18 @@ public class MenuPrincipal extends Activity{
         	}
         });
         
-        }				
+       
+        }	
+	
+	 protected void onActivityResult(int codigo,int codigo2,Intent pedido_completo){
+	      	if(codigo==0){
+	  			if(codigo2==Activity.RESULT_OK){
+	  				
+					//adaptador.clear();
+	  				datos.clear();
+	  				datos.addAll(pedido_completo.getExtras().getStringArrayList("datos_pedido"));
+	  				//adaptador.notifyDataSetChanged();
+	  			}
+	      	}
+	      }
 }

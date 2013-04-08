@@ -48,7 +48,7 @@ public final class R {
         public static final int carajillo_de=0x7f07000f;
         public static final int combinados=0x7f07002a;
         public static final int cortado=0x7f070007;
-        public static final int editText1=0x7f070018;
+        public static final int descripcion=0x7f070018;
         public static final int enviar_al_camarero=0x7f070021;
         public static final int especialidades=0x7f07002b;
         public static final int helados=0x7f070027;
