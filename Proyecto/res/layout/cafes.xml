@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
@@ -11,33 +12,211 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cafe solo    " />
+            android:text="Cafe solo:"
+            android:width="120px" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/cafe_solo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_toRightOf="@id/textView1"
             android:ems="10"
-            android:inputType="number" >
-
-            <requestFocus />
+            android:inputType="number"
+            android:width="80px" >
         </EditText>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cortado    " />
+            android:layout_toRightOf="@id/cafe_solo"
+            android:text="Cortado:"
+            android:width="120px" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/cortado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_toRightOf="@id/textView2"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:width="80px" >
+        </EditText>
 
-    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cafe con leche:"
+            android:width="120px" />
+
+        <EditText
+            android:id="@+id/cafe_con_leche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@id/textView3"
+            android:width="80px" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cafe tiempo:" 
+            android:layout_toRightOf="@id/cafe_con_leche"
+            android:width="120px" />
+        
+          <EditText
+            android:id="@+id/cafe_tiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@id/textView4"
+            android:width="80px" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout2" >
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carajillo de"
+            android:width="120px" />
+
+        <EditText
+            android:id="@+id/carajillo_de"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_toRightOf="@id/textView5"
+            android:width="200px" />
+
+          <EditText
+              android:id="@+id/carajillo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:inputType="number"
+              android:layout_toRightOf="@+id/carajillo_de"
+              android:width="80px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout3" >
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="120px"
+            android:text="Bombon:" />
+
+        <EditText
+            android:id="@+id/bombon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/textView6"
+            android:width="80px" />
+        
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="120px"
+            android:layout_toRightOf="@+id/bombon"
+            android:text="Capuchinno:" />
+
+        <EditText
+            android:id="@+id/capuchinno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/textView7"
+            android:width="80px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout4" >
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion:" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout5" >
+
+        <Button
+            android:id="@+id/cafes_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:layout_toLeftOf="@+id/cafes_cancelar"/>
+            
+        <Button
+            android:id="@+id/cafes_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_centerHorizontal="true" />
+        
+        <Button
+            android:id="@+id/cafes_borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar"
+            android:layout_toRightOf="@+id/cafes_cancelar"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -75,7 +75,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_conbinado"
-                android:text="Combinados de Cafe" />
+                android:text="Combinados
+de Cafe" />
+            
 
             <Button
                 android:id="@+id/especialidades"
@@ -83,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_especialidad"
-                android:text="Especilidades dulces" />
+                android:text="Gofres, creppes
+y brownis" />
         </TableRow>
 
         <TableRow
@@ -98,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Volver para ver pedido" />
+                android:text="Ver pedido" />
 
             <Button
                 android:id="@+id/volver_no_ok"
