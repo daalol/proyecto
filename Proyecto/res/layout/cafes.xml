@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cafe solo:"
-            android:width="120px" />
+            android:width="90px" />
 
         <EditText
             android:id="@+id/cafe_solo"
@@ -22,7 +22,7 @@
             android:layout_toRightOf="@id/textView1"
             android:ems="10"
             android:inputType="number"
-            android:width="80px" >
+            android:width="60px" >
         </EditText>
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/cafe_solo"
             android:text="Cortado:"
-            android:width="120px" />
+            android:width="90px" />
 
         <EditText
             android:id="@+id/cortado"
@@ -40,7 +40,7 @@
             android:layout_toRightOf="@id/textView2"
             android:ems="10"
             android:inputType="number"
-            android:width="80px" >
+            android:width="60px" >
         </EditText>
 
     </RelativeLayout>
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cafe con leche:"
-            android:width="120px" />
+            android:width="90px" />
 
         <EditText
             android:id="@+id/cafe_con_leche"
@@ -66,7 +66,7 @@
             android:ems="10"
             android:inputType="number"
             android:layout_toRightOf="@id/textView3"
-            android:width="80px" >
+            android:width="60px" >
 
             <requestFocus />
         </EditText>
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:text="Cafe tiempo:" 
             android:layout_toRightOf="@id/cafe_con_leche"
-            android:width="120px" />
+            android:width="90px" />
         
           <EditText
             android:id="@+id/cafe_tiempo"
@@ -86,7 +86,7 @@
             android:ems="10"
             android:inputType="number"
             android:layout_toRightOf="@id/textView4"
-            android:width="80px" >
+            android:width="60px" >
 
             <requestFocus />
         </EditText>
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Carajillo de"
-            android:width="120px" />
+            android:width="90px" />
 
         <EditText
             android:id="@+id/carajillo_de"
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:layout_toRightOf="@id/textView5"
-            android:width="200px" />
+            android:width="150px" />
 
           <EditText
               android:id="@+id/carajillo"
@@ -122,7 +122,7 @@
               android:ems="10"
               android:inputType="number"
               android:layout_toRightOf="@+id/carajillo_de"
-              android:width="80px" />
+              android:width="60px" />
 
     </RelativeLayout>
 
@@ -137,7 +137,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="120px"
+            android:width="90px"
             android:text="Bombon:" />
 
         <EditText
@@ -147,13 +147,13 @@
             android:ems="10"
             android:inputType="number"
             android:layout_toRightOf="@+id/textView6"
-            android:width="80px" />
+            android:width="60px" />
         
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="120px"
+            android:width="90px"
             android:layout_toRightOf="@+id/bombon"
             android:text="Capuchinno:" />
 
@@ -164,7 +164,7 @@
             android:ems="10"
             android:inputType="number"
             android:layout_toRightOf="@+id/textView7"
-            android:width="80px" />
+            android:width="60px" />
 
     </RelativeLayout>
 

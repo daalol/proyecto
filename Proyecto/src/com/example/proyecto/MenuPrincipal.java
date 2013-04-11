@@ -16,7 +16,7 @@ import android.widget.ListView;
 public class MenuPrincipal extends Activity{
 	
 	final ArrayList<String> datos = new ArrayList<String>();
-	//ArrayAdapter<String> adaptador = new ArrayAdapter<String>(null, 0);
+	ArrayAdapter<String> adaptador;// = new ArrayAdapter<String>(null, 0);
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class MenuPrincipal extends Activity{
         //ListView donde veremos los productos elegidos
         
         datos.add("Aqui veras los productos elegidos");
-        final ArrayAdapter<String> adaptador =
+    /*   final ArrayAdapter<String>*/ adaptador =
         	    new ArrayAdapter<String>(this,
         	        android.R.layout.simple_list_item_1, datos);	 
         
@@ -83,7 +83,7 @@ public class MenuPrincipal extends Activity{
         final Button borrar_todo= (Button)findViewById(R.id.borrar_todo);
         borrar_todo.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        	
+        		
         		 adaptador.clear(); //vacio la lista
         		 datos.clear(); //vacio el array
         		 datos.add("Vuelvo a poner el mensaje inicial");
@@ -98,12 +98,13 @@ public class MenuPrincipal extends Activity{
 	 protected void onActivityResult(int codigo,int codigo2,Intent pedido_completo){
 	      	if(codigo==0){
 	  			if(codigo2==Activity.RESULT_OK){
-	  				
-					//adaptador.clear();
+	  			
+	  				adaptador.clear();
 	  				datos.clear();
 	  				datos.addAll(pedido_completo.getExtras().getStringArrayList("datos_pedido"));
-	  				//adaptador.notifyDataSetChanged();
+	  				adaptador.notifyDataSetChanged();
 	  			}
 	      	}
 	      }
+	
 }
