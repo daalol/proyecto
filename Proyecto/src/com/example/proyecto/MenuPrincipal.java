@@ -1,6 +1,8 @@
 package com.example.proyecto;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,11 +14,14 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MenuPrincipal extends Activity{
 	
 	final ArrayList<String> datos = new ArrayList<String>();
-	ArrayAdapter<String> adaptador;// = new ArrayAdapter<String>(null, 0);
+	ArrayAdapter<String> adaptador;
+	ListView lstOpciones;
+	String[] estoEsUnaPrueba;
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +30,11 @@ public class MenuPrincipal extends Activity{
         //ListView donde veremos los productos elegidos
         
         datos.add("Aqui veras los productos elegidos");
-    /*   final ArrayAdapter<String>*/ adaptador =
+        	adaptador =
         	    new ArrayAdapter<String>(this,
         	        android.R.layout.simple_list_item_1, datos);	 
         
-        	final ListView lstOpciones = (ListView)findViewById(R.id.LstOpciones);
+        	lstOpciones = (ListView)findViewById(R.id.LstOpciones);
         	lstOpciones.setAdapter(adaptador);
         //fin listView
         	
@@ -91,7 +96,7 @@ public class MenuPrincipal extends Activity{
         		 
         	}
         });
-        
+       
        
         }	
 	
@@ -99,10 +104,23 @@ public class MenuPrincipal extends Activity{
 	      	if(codigo==0){
 	  			if(codigo2==Activity.RESULT_OK){
 	  			
-	  				adaptador.clear();
+	  				/*adaptador.clear();
 	  				datos.clear();
 	  				datos.addAll(pedido_completo.getExtras().getStringArrayList("datos_pedido"));
-	  				adaptador.notifyDataSetChanged();
+	  				adaptador.notifyDataSetChanged();*/
+	  				
+	  				//forma parte de la prueba
+	  				String[] estoEsUnaPrueba= pedido_completo.getStringArrayExtra("estoEsUnaPrueba");
+	  				List<String>a=Arrays.asList(estoEsUnaPrueba);
+	  				
+	  				final TextView pruebax= (TextView)findViewById(R.id.textView11);
+	  				pruebax.setText(estoEsUnaPrueba[2].toString());
+	  				
+	  				ArrayAdapter<String>adaptador2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, a);
+	  				//lstOpciones = (ListView)findViewById(R.id.LstOpciones);
+	  	        	lstOpciones.setAdapter(adaptador2);
+	  	        	adaptador2.notifyDataSetChanged();
+	  				
 	  			}
 	      	}
 	      }

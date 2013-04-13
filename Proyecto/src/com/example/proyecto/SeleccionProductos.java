@@ -8,12 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class SeleccionProductos extends Activity {
 
 	//ArrayList que contendra todos los datos del pedido y que enviaremos a MenuPrincipal
     final ArrayList<String> datos_pedido = new ArrayList<String>();
+    String[] estoEsUnaPrueba;
     
     
 	public void onCreate(Bundle savedInstanceState) {
@@ -77,8 +79,11 @@ public class SeleccionProductos extends Activity {
         	public void onClick(View v){
         		//para probarlo
         		Intent as= new Intent(SeleccionProductos.this, MenuPrincipal.class);
-        		as.putExtra("valor", datos_pedido);
-        		//startActivity(as);
+        		as.putStringArrayListExtra("datos_pedido", datos_pedido);
+        		
+        		//forma parte de la prueba
+        		as.putExtra("estoEsUnaPrueba", estoEsUnaPrueba);
+
            		setResult(Activity.RESULT_OK,as);
            		SeleccionProductos.this.finish();
         	}
@@ -99,9 +104,13 @@ public class SeleccionProductos extends Activity {
 	  protected void onActivityResult(int codigo,int codigo2,Intent pedido){
       	if(codigo==0){
   			if(codigo2==Activity.RESULT_OK){
-
+  				
   				datos_pedido.addAll(pedido.getExtras().getStringArrayList("datos_pedido"));
   				
+  				//forma parte de la prueba
+  			    estoEsUnaPrueba= pedido.getStringArrayExtra("estoEsUnaPrueba");
+  				final TextView pruebas= (TextView)findViewById(R.id.textView111);
+  				pruebas.setText(estoEsUnaPrueba[1].toString());
   			}
       	}
       }
