@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -90,4 +93,29 @@ public class Cafes extends Activity {
         	}
         });
 	}
+	
+	
+	//***** Menu *****
+	 @Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.activity_main, menu);
+	         return true;
+	    }
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.MnuOpc1: 
+	        	System.exit(0); //cierro la aplicacion
+	        	break;
+	        case R.id.MnuOpc2:
+	        	Intent intent2 = new Intent(Cafes.this, InstruccionesDeUso.class );
+	            startActivity(intent2);
+	        	break;
+	        case R.id.MnuOpc3:
+	        	Intent intent3 = new Intent(Cafes.this, AcercaDe.class );
+	            startActivity(intent3);
+	        	break;
+	        	}
+	        return true;
+	        }
 }

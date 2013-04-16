@@ -1,6 +1,5 @@
 package com.example.proyecto;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,9 +15,7 @@ public class InstruccionesDeUso extends MainActivity {
         volverInstrucciones.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		
-        		Intent intent4 = new Intent (InstruccionesDeUso.this, MainActivity.class);
-        	
-        		startActivity(intent4);
+        		finish();
         	}
         });
 	}

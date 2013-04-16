@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -27,11 +30,7 @@ public class SeleccionProductos extends Activity {
         cafes.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		//para probarlo
-        		
-        		
            		Intent deSeleccionProductosACafes = new Intent(SeleccionProductos.this,Cafes.class);
-           		//i.putExtra("datos", datos);
-           		//startActivity(i);
            		SeleccionProductos.this.startActivityForResult(deSeleccionProductosACafes,0);
         	}
         });
@@ -83,7 +82,10 @@ public class SeleccionProductos extends Activity {
         		
         		//forma parte de la prueba
         		as.putExtra("estoEsUnaPrueba", estoEsUnaPrueba);
-
+        		
+        		final TextView pruebas= (TextView)findViewById(R.id.textView111);
+  				pruebas.setText(estoEsUnaPrueba[1].toString());
+        		
            		setResult(Activity.RESULT_OK,as);
            		SeleccionProductos.this.finish();
         	}
@@ -109,9 +111,32 @@ public class SeleccionProductos extends Activity {
   				
   				//forma parte de la prueba
   			    estoEsUnaPrueba= pedido.getStringArrayExtra("estoEsUnaPrueba");
-  				final TextView pruebas= (TextView)findViewById(R.id.textView111);
-  				pruebas.setText(estoEsUnaPrueba[1].toString());
+ 
   			}
       	}
       }
+	  
+	//***** Menu *****
+	  @Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.activity_main, menu);
+	         return true;
+	    }
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.MnuOpc1: 
+	        	System.exit(0); //cierro la aplicacion
+	        	break;
+	        case R.id.MnuOpc2:
+	        	Intent intent2 = new Intent(SeleccionProductos.this, InstruccionesDeUso.class );
+	            startActivity(intent2);
+	        	break;
+	        case R.id.MnuOpc3:
+	        	Intent intent3 = new Intent(SeleccionProductos.this, AcercaDe.class );
+	            startActivity(intent3);
+	        	break;
+	        	}
+	        return true;
+	        }
 }

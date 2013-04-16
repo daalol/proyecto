@@ -9,6 +9,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -110,19 +113,44 @@ public class MenuPrincipal extends Activity{
 	  				adaptador.notifyDataSetChanged();*/
 	  				
 	  				//forma parte de la prueba
-	  				String[] estoEsUnaPrueba= pedido_completo.getStringArrayExtra("estoEsUnaPrueba");
-	  				List<String>a=Arrays.asList(estoEsUnaPrueba);
+	  			    estoEsUnaPrueba= pedido_completo.getStringArrayExtra("estoEsUnaPrueba");
+	  				final TextView textView11= (TextView)findViewById(R.id.textView11);
+	  				textView11.setText(estoEsUnaPrueba[2].toString());
 	  				
-	  				final TextView pruebax= (TextView)findViewById(R.id.textView11);
-	  				pruebax.setText(estoEsUnaPrueba[2].toString());
+	  				
+	  				/*List<String>a=Arrays.asList(estoEsUnaPrueba);
 	  				
 	  				ArrayAdapter<String>adaptador2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, a);
 	  				//lstOpciones = (ListView)findViewById(R.id.LstOpciones);
 	  	        	lstOpciones.setAdapter(adaptador2);
-	  	        	adaptador2.notifyDataSetChanged();
+	  	        	adaptador2.notifyDataSetChanged();*/
 	  				
 	  			}
 	      	}
 	      }
+	 
+	 // ***** Menu *****
+	 @Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.activity_main, menu);
+	         return true;
+	    }
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.MnuOpc1: 
+	        	System.exit(0); //cierro la aplicacion
+	        	break;
+	        case R.id.MnuOpc2:
+	        	Intent intent2 = new Intent(MenuPrincipal.this, InstruccionesDeUso.class );
+	            startActivity(intent2);
+	        	break;
+	        case R.id.MnuOpc3:
+	        	Intent intent3 = new Intent(MenuPrincipal.this, AcercaDe.class );
+	            startActivity(intent3);
+	        	break;
+	        	}
+	        return true;
+	        }
 	
 }
