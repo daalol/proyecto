@@ -36,25 +36,25 @@ public class Cafes extends Activity {
         	public void onClick(View v){
         		
         		//Bateria de if's para contruir el pedido de cafes
-        		if(cafe_solo.getText().toString()!="0" || (String)cafe_solo.getText().toString()!=""){
-        			datos_cafes.add("Cafe_solo: "+cafe_solo.getText().toString());
+        		if(cafe_solo.getText().toString().equalsIgnoreCase("0") || !cafe_solo.getText().toString().equalsIgnoreCase("")){
+        			datos_cafes.add("Cafe solo: "+cafe_solo.getText().toString());
         		}
-        		if(cortado.getText().toString()!="0" || (String)cortado.getText().toString()!=""){
+        		if(cortado.getText().toString()!="0" || cortado.getText().toString()!=""){
         			datos_cafes.add("Cortado: "+cortado.getText().toString());
         		}
-        		if(cafe_con_leche.getText().toString()!="0" || (String)cafe_con_leche.getText().toString()!=""){
+        		if(cafe_con_leche.getText().toString()!="0" || cafe_con_leche.getText().toString()!=""){
         			datos_cafes.add("Cafe con leche: "+cafe_con_leche.getText().toString());
         		}
-        		if(cafe_tiempo.getText().toString()!="0" || (String)cafe_tiempo.getText().toString()!=""){
+        		if(cafe_tiempo.getText().toString()!="0" || cafe_tiempo.getText().toString()!=""){
         			datos_cafes.add("Cafe del tiempo: "+cafe_tiempo.getText().toString());
         		}
-        		if(carajillo.getText().toString()!="0" || (String)carajillo.getText().toString()!=""){
+        		if(carajillo.getText().toString()!="0" || carajillo.getText().toString()!=""){
         			datos_cafes.add("Carajillo de"+carajillo_de.getText().toString()+": "+carajillo.getText().toString());
         		}
-        		if(bombon.getText().toString()!="0" || (String)bombon.getText().toString()!=""){
+        		if(bombon.getText().toString()!="0" || bombon.getText().toString()!=""){
         			datos_cafes.add("Bombon: "+bombon.getText().toString());
         		}
-        		if(capuchinno.getText().toString()!="0" || (String)capuchinno.getText().toString()!=""){
+        		if(capuchinno.getText().toString()!="0" || capuchinno.getText().toString()!=""){
         			datos_cafes.add("Capuchinno: "+capuchinno.getText().toString());
         		}
         		//este si o si va a entrar en el array

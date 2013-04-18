@@ -48,7 +48,8 @@ public class MenuPrincipal extends Activity{
         	public void onClick(View v){
         		
         		Intent deMenuPrincipalASeleccionProductos = new Intent (MenuPrincipal.this, SeleccionProductos.class);
-        		startActivity(deMenuPrincipalASeleccionProductos );
+        		MenuPrincipal.this.startActivityForResult(deMenuPrincipalASeleccionProductos,0);
+        		
         	}
         });
         
@@ -107,15 +108,15 @@ public class MenuPrincipal extends Activity{
 	      	if(codigo==0){
 	  			if(codigo2==Activity.RESULT_OK){
 	  			
-	  				/*adaptador.clear();
+	  				adaptador.clear();
 	  				datos.clear();
 	  				datos.addAll(pedido_completo.getExtras().getStringArrayList("datos_pedido"));
-	  				adaptador.notifyDataSetChanged();*/
+	  				adaptador.notifyDataSetChanged();
 	  				
-	  				//forma parte de la prueba
+	  				/*//forma parte de la prueba
 	  			    estoEsUnaPrueba= pedido_completo.getStringArrayExtra("estoEsUnaPrueba");
 	  				final TextView textView11= (TextView)findViewById(R.id.textView11);
-	  				textView11.setText(estoEsUnaPrueba[2].toString());
+	  				textView11.setText(estoEsUnaPrueba[2].toString());*/
 	  				
 	  				
 	  				/*List<String>a=Arrays.asList(estoEsUnaPrueba);
