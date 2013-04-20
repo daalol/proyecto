@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#a6c53b" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elige tus sabores:" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sabor1"
+        android:layout_alignBottom="@+id/sabor1"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="Sabor 1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sabor2"
+        android:layout_alignBottom="@+id/sabor2"
+        android:layout_toRightOf="@+id/sabor2"
+        android:text="Sabor 2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sabor3"
+        android:text="Elige el tamaño:" />
+    
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sabor3"
+        android:layout_alignBottom="@+id/sabor3"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="Sabor3" />
+
+    <Spinner
+        android:id="@+id/sabor1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1" />
+
+    <Spinner
+        android:id="@+id/sabor2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sabor1" />
+    
+     <Spinner
+        android:id="@+id/sabor3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sabor2" />
+
+    <Spinner
+        android:id="@+id/tamaño"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/tarrina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tamaño"
+        android:text="Tarrina" />
+
+    <CheckBox
+        android:id="@+id/cucurucho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tamaño"
+        android:layout_toRightOf="@+id/tarrina"
+        android:text="Cucurucho" />
+
+    <CheckBox
+        android:id="@+id/copa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tamaño"
+        android:layout_toRightOf="@+id/cucurucho"
+        android:text="Copa" />
+
+    <Button
+        android:id="@+id/añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/tarrina"
+        android:text="Añadir" />
+
+    <Button
+        android:id="@+id/cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tarrina"
+        android:layout_toRightOf="@+id/añadir"
+        android:text="Cancelar" />
+
+    
+
+</RelativeLayout>

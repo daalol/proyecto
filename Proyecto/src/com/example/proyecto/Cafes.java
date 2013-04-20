@@ -36,30 +36,31 @@ public class Cafes extends Activity {
         	public void onClick(View v){
         		
         		//Bateria de if's para contruir el pedido de cafes
-        		if(cafe_solo.getText().toString().equalsIgnoreCase("0") || !cafe_solo.getText().toString().equalsIgnoreCase("")){
+        		if(!cafe_solo.getText().toString().trim().equals("0") && cafe_solo.getText().toString().length()!=0){
         			datos_cafes.add("Cafe solo: "+cafe_solo.getText().toString());
         		}
-        		if(cortado.getText().toString()!="0" || cortado.getText().toString()!=""){
+        		if(!cortado.getText().toString().trim().equals("0") && cortado.getText().toString().length()!=0){
         			datos_cafes.add("Cortado: "+cortado.getText().toString());
         		}
-        		if(cafe_con_leche.getText().toString()!="0" || cafe_con_leche.getText().toString()!=""){
+        		if(!cafe_con_leche.getText().toString().trim().equals("0") && cafe_con_leche.getText().toString().length()!=0){
         			datos_cafes.add("Cafe con leche: "+cafe_con_leche.getText().toString());
         		}
-        		if(cafe_tiempo.getText().toString()!="0" || cafe_tiempo.getText().toString()!=""){
+        		if(!cafe_tiempo.getText().toString().trim().equals("0") && cafe_tiempo.getText().toString().length()!=0){
         			datos_cafes.add("Cafe del tiempo: "+cafe_tiempo.getText().toString());
         		}
-        		if(carajillo.getText().toString()!="0" || carajillo.getText().toString()!=""){
+        		if(!carajillo.getText().toString().trim().equals("0") && carajillo.getText().toString().length()!=0){
         			datos_cafes.add("Carajillo de"+carajillo_de.getText().toString()+": "+carajillo.getText().toString());
         		}
-        		if(bombon.getText().toString()!="0" || bombon.getText().toString()!=""){
+        		if(!bombon.getText().toString().trim().equals("0") && bombon.getText().toString().length()!=0){
         			datos_cafes.add("Bombon: "+bombon.getText().toString());
         		}
-        		if(capuchinno.getText().toString()!="0" || capuchinno.getText().toString()!=""){
+        		if(!capuchinno.getText().toString().trim().equals("0") && capuchinno.getText().toString().length()!=0){
         			datos_cafes.add("Capuchinno: "+capuchinno.getText().toString());
         		}
-        		//este si o si va a entrar en el array
-        		datos_cafes.add("Descripcion: "+descripcion.getText().toString());
-        		datos_cafes.add("");
+        		if(descripcion.getText().toString().length()!=0){
+        			datos_cafes.add("Descripcion: "+descripcion.getText().toString());
+        		}
+        		
         		
         		//forma parte lde la prueba
         		String[] estoEsUnaPrueba= new String[] {"test", "test2","test3"};
@@ -85,11 +86,19 @@ public class Cafes extends Activity {
         	}
         });
         
-        //ira en la ultima posicion de los botones
+        //inicializar a "" todas las variables editText
         final Button cafes_borrar= (Button)findViewById(R.id.cafes_borrar);
         cafes_borrar.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
-        		//inicializar a 0 o nada todas las variables editText
+        		cafe_solo.setText("");
+        		cortado.setText("");
+        		cafe_con_leche.setText("");
+        		cafe_tiempo.setText("");
+        		carajillo_de.setText("");
+        		carajillo.setText("");
+        		bombon.setText("");
+        		capuchinno.setText("");
+        		descripcion.setText("");
         	}
         });
 	}

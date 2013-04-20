@@ -76,8 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_conbinado"
-                android:text="Combinados
-de Cafe" />
+                android:text="Combinados de Cafe" />
             
             <Button
                 android:id="@+id/especialidades"
@@ -85,8 +84,7 @@ de Cafe" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_especialidad"
-                android:text="Gofres, creppes
-y brownies" />
+                android:text="Gofres, creppes y brownies" />
 
         </TableRow>
 

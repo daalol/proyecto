@@ -1,8 +1,6 @@
 package com.example.proyecto;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,7 +28,7 @@ public class MenuPrincipal extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_principal);
         
-        //ListView donde veremos los productos elegidos
+        // *** LIST VIEW DONDE VEREMOS LOS PRODUCTOS ELEGIDOS ***
         
         datos.add("Aqui veras los productos elegidos");
         	adaptador =
@@ -39,21 +37,58 @@ public class MenuPrincipal extends Activity{
         
         	lstOpciones = (ListView)findViewById(R.id.LstOpciones);
         	lstOpciones.setAdapter(adaptador);
-        //fin listView
+        //*** FIN LISTVIEW ***
         	
-        //Cuando pulsemos en seleccion de productos nos llevara a otra pantalla donde
-        //veremos todas las opciones
-        final Button seleccion_de_productos= (Button)findViewById(R.id.seleccion_de_productos);
-        seleccion_de_productos.setOnClickListener(new OnClickListener(){
-        	public void onClick(View v){
-        		
-        		Intent deMenuPrincipalASeleccionProductos = new Intent (MenuPrincipal.this, SeleccionProductos.class);
-        		MenuPrincipal.this.startActivityForResult(deMenuPrincipalASeleccionProductos,0);
-        		
-        	}
-        });
+        // *** BOTONES DE PRODUCTOS ***
+         /*   final Button cafes= (Button)findViewById(R.id.cafes);
+            cafes.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+               		Intent deMenuPrincipalACafes = new Intent(MenuPrincipal.this,Cafes.class);
+               		MenuPrincipal.this.startActivityForResult(deMenuPrincipalACafes,0);
+            	}
+            });
+            
+          final Button refrescos= (Button)findViewById(R.id.refrescos);
+            refrescos.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+            		
+            	}
+            });*/
+            
+            final Button helados= (Button)findViewById(R.id.helados);
+            helados.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+            		Intent deMenuPrincipalAHelados = new Intent(MenuPrincipal.this,Helados.class);
+               		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAHelados,0);
+            	}
+            });
+          /*  
+            final Button bolleria= (Button)findViewById(R.id.bolleria);
+            cafes.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+            		
+            	}
+            });
+            
+            final Button combinados= (Button)findViewById(R.id.combinados);
+            cafes.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+            		
+            	}
+            });
+            
+            final Button especialidades= (Button)findViewById(R.id.especialidades);
+            especialidades.setOnClickListener(new OnClickListener(){
+            	public void onClick(View v){
+            		
+            	}
+            });*/
+            
+        // *** FIN BOTONES DE PRODUCTOS ***
+
         
-        //llamara a una clase que se encarga del envio de los datos a el servidor
+        // *** ENVIO DE DATOS A LA APLICACION SERVIDORA ***
+        	
         final Button enviar_al_camarero= (Button)findViewById(R.id.enviar_al_camarero);
         enviar_al_camarero.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
@@ -63,6 +98,7 @@ public class MenuPrincipal extends Activity{
         		startActivity(intent1);*/
         	}
         });
+        // *** FIN ENVIO DE DATOS ***
         
         // *** BOTONES DE BORRADO ***
         
@@ -100,6 +136,8 @@ public class MenuPrincipal extends Activity{
         		 
         	}
         });
+        
+        // ***** FIN BOTONES DE BORRADO *****
        
        
         }	

@@ -1,72 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#a6c53b" >
+    android:layout_height="fill_parent" 
+    android:background="#a6c53b">
+    
+    <!-- BOTONES DE LAS DISTINTAS FAMILIAS DE PRODUCTOS -->
+    <Button
+        android:id="@+id/cafes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/refrescos"
+        android:drawableTop="@drawable/ic_cafe"
+        android:text="Cafes"
+        android:textSize="8dp" />
+    
+    <Button
+        android:id="@+id/refrescos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/helados"
+        android:layout_below="@+id/cafes"
+        android:drawableTop="@drawable/ic_refresco"
+        android:text="Refrescos"
+        android:textSize="8dp" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:weightSum="4" >
-
-          <Button
-              android:id="@+id/seleccion_de_productos"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:layout_weight="1"
-              android:layout_marginLeft="3dp"
-              android:text="Seleccion de productos" />
-
-        <ListView
-            android:id="@+id/LstOpciones"
-            android:layout_width="fill_parent"
-            android:layout_weight="1"
-            android:layout_height="274dp" >
-        </ListView>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2" >
+     <Button
+         android:id="@+id/helados"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignRight="@+id/bolleria"
+         android:layout_below="@+id/refrescos"
+         android:layout_weight="1"
+         android:drawableTop="@drawable/ic_helado"
+         android:text="Helados"
+         android:textSize="8dp" />
 
             <Button
-                android:id="@+id/borrar"
+                android:id="@+id/bolleria"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="1dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/combinados"
+                android:layout_below="@+id/helados"
                 android:layout_weight="1"
-                android:text="Borrar producto" />
+                android:drawableTop="@drawable/ic_bolleria"
+                android:text="Bolleria"
+                android:textSize="8dp" />
+            
+           <Button
+               android:id="@+id/combinados"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignRight="@+id/especialidades"
+               android:layout_below="@+id/bolleria"
+               android:drawableTop="@drawable/ic_conbinado"
+               android:text="Combinados
+de
+Cafe"
+               android:textSize="8dp" />
+            
+            <Button
+                android:id="@+id/especialidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/combinados"
+                android:drawableTop="@drawable/ic_especialidad"
+                android:text="Especialidades" 
+                android:textSize="8dp"/>
+
+            <!-- LISTVIEW CON TEXTVIEW ENCIMA-->
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cafes"
+                android:text="Su pedido:" />
+
+            <ListView
+                android:id="@+id/LstOpciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/combinados"
+                android:layout_alignRight="@+id/borrar_todo"
+                android:layout_below="@+id/titulo"
+                android:layout_toRightOf="@+id/refrescos" >
+
+       		 </ListView>
+       		 
+            <!-- BOTONES DE BORRADO -->
+
+             <Button
+                 android:id="@+id/borrar"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/especialidades"
+                 android:layout_below="@+id/LstOpciones"
+                 android:layout_toRightOf="@+id/especialidades"
+                 android:layout_marginTop="2dp"
+                 android:text="Borrar producto" />
 
             <Button
                 android:id="@+id/borrar_todo"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_marginRight="3dp"
-                android:layout_marginTop="1dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/borrar"
+                android:layout_below="@+id/LstOpciones"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/borrar"
                 android:text="Borrar todo el pedido" />
+            
+             <!-- BOTONES DE ENVIO AL SERVIDOR -->
 
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/enviar_al_camarero"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="5dp"
-            android:text="Enviar al camarero" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Esto es una prueba" />
-
-    </LinearLayout>
+                 <Button
+                     android:id="@+id/enviar_al_camarero"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:layout_alignRight="@+id/borrar_todo"
+                     android:layout_below="@+id/especialidades"
+                     android:layout_marginTop="2dp"
+                     android:text="Enviar al camarero" />
 
 </RelativeLayout>

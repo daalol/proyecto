@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +22,13 @@
             </intent-filter>
         </activity>
         <!-- Añadiendo .javas a partir de aqui-->
-        <activity android:name=".AcercaDe"></activity>
-        <activity android:name=".InstruccionesDeUso"></activity>
-        <activity android:name=".MenuPrincipal"></activity>
-        <activity android:name=".SeleccionProductos"></activity>
-        <activity android:name=".Cafes"></activity>
+        <activity android:name=".AcercaDe"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUso"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".MenuPrincipal"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".SeleccionProductos"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".Cafes"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".Refrescos"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".Helados"  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
