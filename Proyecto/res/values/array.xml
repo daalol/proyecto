@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sabores">
+        <item>Chocolate</item>
+        <item>Vainilla</item>
+        <item>Fresa</item>
+        <item>Strachatella</item>
+        <item>Leche Merengada</item>
+        <item>Limon</item>
+        <item>Mora</item>
+        <item>Platano</item>
+        <item>Nata</item>
+        <item>Nutella</item>
+        <item>Chocolate blanco</item>
+        <item>Tutti fruti</item>
+        <item>Caramelo</item>
+    </string-array>
+    
+    <string-array name="sabores2">
+        <item></item>
+        <item>Chocolate</item>
+        <item>Vainilla</item>
+        <item>Fresa</item>
+        <item>Strachatella</item>
+        <item>Leche Merengada</item>
+        <item>Limon</item>
+        <item>Mora</item>
+        <item>Platano</item>
+        <item>Nata</item>
+        <item>Nutella</item>
+        <item>Chocolate blanco</item>
+        <item>Tutti fruti</item>
+        <item>Caramelo</item>
+    </string-array>
+    
+    <string-array name="tamaño">
+        <item>Pequeño</item>
+        <item>Mediano</item>
+        <item>Grande</item>
+    </string-array>
+</resources>

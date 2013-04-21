@@ -9,7 +9,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Elige tus sabores:" />
+        android:text="Elige tus sabores:    " />
 
     <TextView
         android:id="@+id/textView2"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/sabor3"
-        android:text="Elige el tamaño:" />
+        android:text="Elige el tamaño:     " />
     
     <TextView
         android:id="@+id/textView5"
@@ -74,29 +74,33 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView4" />
 
-    <CheckBox
-        android:id="@+id/tarrina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/textView3"
         android:layout_below="@+id/tamaño"
-        android:text="Tarrina" />
+        android:orientation="horizontal" >
 
-    <CheckBox
-        android:id="@+id/cucurucho"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tamaño"
-        android:layout_toRightOf="@+id/tarrina"
-        android:text="Cucurucho" />
-
-    <CheckBox
-        android:id="@+id/copa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tamaño"
-        android:layout_toRightOf="@+id/cucurucho"
-        android:text="Copa" />
+		    <RadioButton
+		        android:id="@+id/tarrina"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:checked="true"
+		        android:text="Tarrina" />
+		
+		    <RadioButton
+		        android:id="@+id/cucurucho"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Cucurucho" />
+		
+		    <RadioButton
+		        android:id="@+id/copa"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Copa" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/añadir"
@@ -104,17 +108,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/tarrina"
+        android:layout_below="@+id/grupo"
         android:text="Añadir" />
 
     <Button
         android:id="@+id/cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tarrina"
+        android:layout_alignRight="@+id/tamaño"
+        android:layout_below="@+id/grupo"
         android:layout_toRightOf="@+id/añadir"
         android:text="Cancelar" />
-
-    
 
 </RelativeLayout>
