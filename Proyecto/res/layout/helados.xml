@@ -44,7 +44,8 @@
         android:layout_alignBaseline="@+id/sabor3"
         android:layout_alignBottom="@+id/sabor3"
         android:layout_alignLeft="@+id/textView3"
-        android:text="Sabor3" />
+        android:text="Sabor3"
+        android:visibility="invisible" />
 
     <Spinner
         android:id="@+id/sabor1"
@@ -61,11 +62,12 @@
         android:layout_below="@+id/sabor1" />
     
      <Spinner
-        android:id="@+id/sabor3"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/sabor2" />
+         android:id="@+id/sabor3"
+         android:layout_width="250dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/sabor2"
+         android:visibility="invisible" />
 
     <Spinner
         android:id="@+id/tamaño"
@@ -87,19 +89,22 @@
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:checked="true"
-		        android:text="Tarrina" />
+		        android:text="Tarrina"
+		        android:onClick="onRadioButtonClicked" />
 		
 		    <RadioButton
 		        android:id="@+id/cucurucho"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:text="Cucurucho" />
+		        android:text="Cucurucho"
+		        android:onClick="onRadioButtonClicked" />
 		
 		    <RadioButton
 		        android:id="@+id/copa"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:text="Copa" />
+		        android:text="Copa"
+		        android:onClick="onRadioButtonClicked" />
     </RadioGroup>
 
     <Button

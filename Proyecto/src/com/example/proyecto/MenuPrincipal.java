@@ -29,7 +29,6 @@ public class MenuPrincipal extends Activity{
         
         // *** LIST VIEW DONDE VEREMOS LOS PRODUCTOS ELEGIDOS ***
         
-        datos.add("Aqui veras los productos elegidos");
         	adaptador =
         	    new ArrayAdapter<String>(this,
         	        android.R.layout.simple_list_item_1, datos);	 
@@ -141,31 +140,17 @@ public class MenuPrincipal extends Activity{
        
         }	
 	
-	 protected void onActivityResult(int codigo,int codigo2,Intent pedido_completo){
+	 protected void onActivityResult(int codigo,int codigo2,Intent pedido){
 	      	if(codigo==0){
 	  			if(codigo2==Activity.RESULT_OK){
 	  			
-	  				adaptador.clear();
-	  				datos.clear();
-	  				datos.addAll(pedido_completo.getExtras().getStringArrayList("datos_pedido"));
+	  				datos.add(pedido.getExtras().getString("datos_pedido"));
 	  				adaptador.notifyDataSetChanged();
-	  				
-	  				/*//forma parte de la prueba
-	  			    estoEsUnaPrueba= pedido_completo.getStringArrayExtra("estoEsUnaPrueba");
-	  				final TextView textView11= (TextView)findViewById(R.id.textView11);
-	  				textView11.setText(estoEsUnaPrueba[2].toString());*/
-	  				
-	  				
-	  				/*List<String>a=Arrays.asList(estoEsUnaPrueba);
-	  				
-	  				ArrayAdapter<String>adaptador2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, a);
-	  				//lstOpciones = (ListView)findViewById(R.id.LstOpciones);
-	  	        	lstOpciones.setAdapter(adaptador2);
-	  	        	adaptador2.notifyDataSetChanged();*/
 	  				
 	  			}
 	      	}
 	      }
+	 
 	 
 	 // ***** Menu *****
 	 @Override

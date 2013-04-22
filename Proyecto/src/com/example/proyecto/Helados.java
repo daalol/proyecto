@@ -3,11 +3,17 @@ package com.example.proyecto;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Helados extends Activity{
 
@@ -17,10 +23,10 @@ public class Helados extends Activity{
         
         // ***** SPINNERS ******
         //Inicializo los 4 spinners 
-        Spinner sabor1 = (Spinner) findViewById(R.id.sabor1);
-		Spinner sabor2 = (Spinner) findViewById(R.id.sabor2);
-		Spinner sabor3 = (Spinner) findViewById(R.id.sabor3);
-		Spinner tamaño = (Spinner) findViewById(R.id.tamaño);
+        final Spinner sabor1 = (Spinner) findViewById(R.id.sabor1);
+		final Spinner sabor2 = (Spinner) findViewById(R.id.sabor2);
+		final Spinner sabor3 = (Spinner) findViewById(R.id.sabor3);
+		final Spinner tamaño = (Spinner) findViewById(R.id.tamaño);
 		
 		//Configuro los tres adaptadores
 		ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(this, R.array.sabores , android.R.layout.simple_spinner_item);
@@ -40,10 +46,39 @@ public class Helados extends Activity{
         
 		
 		// ****** RADIO BUTTONS ******
+		final RadioButton tarrina= (RadioButton)findViewById(R.id.tarrina);
+		final RadioButton cucurucho= (RadioButton)findViewById(R.id.cucurucho);
+		final RadioButton copa= (RadioButton)findViewById(R.id.copa);
+		final TextView textView5= (TextView)findViewById(R.id.textView5);
+		final TextView textView4= (TextView)findViewById(R.id.textView4);
 		
+		tarrina.setOnClickListener(new OnClickListener(){
+			public void onClick(View v){
+           		sabor3.setVisibility(v.INVISIBLE);
+           		tamaño.setVisibility(v.VISIBLE);
+           		textView5.setVisibility(v.INVISIBLE);
+           		textView4.setVisibility(v.VISIBLE);
+        	}
+		});
+		cucurucho.setOnClickListener(new OnClickListener(){
+			public void onClick(View v){
+           		sabor3.setVisibility(v.INVISIBLE);
+           		tamaño.setVisibility(v.VISIBLE);
+           		textView5.setVisibility(v.INVISIBLE);
+           		textView4.setVisibility(v.VISIBLE);
+        	}
+		});
+		copa.setOnClickListener(new OnClickListener(){
+			public void onClick(View v){
+           		sabor3.setVisibility(v.VISIBLE);
+           		tamaño.setVisibility(v.INVISIBLE);
+           		textView5.setVisibility(v.VISIBLE);
+           		textView4.setVisibility(v.INVISIBLE);
+        	}
+		});
 		
 		// ****** BOTONES ******
-		//Boton añadir, sirve para cerrar esta actividad sin enviar nada
+		//Boton cancelar, sirve para cerrar esta actividad sin enviar nada
         final Button cancelar= (Button)findViewById(R.id.cancelar);
         cancelar.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
@@ -57,9 +92,45 @@ public class Helados extends Activity{
         	public void onClick(View v){
 
         		Intent deHeladosAMenuPrincipal=new Intent(Helados.this,MenuPrincipal.class);
+        		//llamo al metodo que formateara todos los datos para enviarlos despues a MenuPrincipal
+        		deHeladosAMenuPrincipal.putExtra("datos_pedido",
+        			formateaDatos(sabor1,sabor2,sabor3,tamaño,tarrina,cucurucho,copa));
            		setResult(Activity.RESULT_OK,deHeladosAMenuPrincipal);
            		Helados.this.finish();
         	}
         });
 	}
+	
+	
+	//Metodo que formateara todos los datos en solo un String
+	public String formateaDatos(Spinner sabor1,Spinner sabor2,Spinner sabor3,
+			Spinner tamaño,RadioButton tarrina,RadioButton cucurucho,RadioButton copa){
+		
+		String formato=estaPulsado(tarrina,cucurucho,copa);
+			
+			if(formato.equals("Copa")){
+				return formato+": "+sabor1.getSelectedItem().toString()+" "
+						+sabor2.getSelectedItem().toString()+" "+sabor3.getSelectedItem().toString();
+			}
+			else{
+			return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()+" "
+					+sabor2.getSelectedItem().toString();
+			}
+		
+	}
+	
+	//Metodo que chequeara que radioButton esta pulsado y devolvera un String
+		public String estaPulsado(RadioButton tarrina,RadioButton cucurucho,RadioButton copa){
+			if(tarrina.isChecked()){
+				return "Tarrina";
+			}
+			else if(cucurucho.isChecked()){
+				return "Cucurucho";
+			}
+			else{
+				return "Copa";
+			}
+			
+		}
+	//Fin metodos
 }
