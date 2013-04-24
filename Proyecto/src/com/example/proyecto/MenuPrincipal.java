@@ -105,20 +105,22 @@ public class MenuPrincipal extends Activity{
         borrar.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		
-        		AlertDialog.Builder dialogo = new AlertDialog.Builder(MenuPrincipal.this);
-        		dialogo.setTitle("Selecciona uno:");
-        		final CharSequence[] cs = datos.toArray(new CharSequence[datos.size()]);
-        		 dialogo.setItems(cs, new DialogInterface.OnClickListener() {
-        		        public void onClick(DialogInterface dialog, int item) {
-        		           
-        		        	datos.remove(item);
-        		        	adaptador.notifyDataSetChanged();//actualizo los cambios en la lista
-        		            dialog.cancel();
-        		        }
-        		    });
-        		
-        		dialogo.create();
-        		dialogo.show();
+	        	if(!datos.isEmpty()){
+	        		AlertDialog.Builder dialogo = new AlertDialog.Builder(MenuPrincipal.this);
+	        		dialogo.setTitle("Selecciona uno:");
+	        		final CharSequence[] cs = datos.toArray(new CharSequence[datos.size()]);
+	        		 dialogo.setItems(cs, new DialogInterface.OnClickListener() {
+	        		        public void onClick(DialogInterface dialog, int item) {
+	        		           
+	        		        	datos.remove(item);
+	        		        	adaptador.notifyDataSetChanged();//actualizo los cambios en la lista
+	        		            dialog.cancel();
+	        		        }
+	        		    });
+	        		
+			        		dialogo.create();
+			        		dialogo.show();
+        		}
         	}
         });
        
@@ -129,7 +131,6 @@ public class MenuPrincipal extends Activity{
         		
         		 adaptador.clear(); //vacio la lista
         		 datos.clear(); //vacio el array
-        		 datos.add("Vuelvo a poner el mensaje inicial");
         		 adaptador.notifyDataSetChanged(); //actualizo los cambios en la lista
         		 
         	}

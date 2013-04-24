@@ -100,8 +100,32 @@ public class Helados extends Activity{
         	}
         });
 	}
+	 // ***** Menu *****
+	 @Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.activity_main, menu);
+	         return true;
+	    }
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.MnuOpc1: 
+	        	System.exit(0); //cierro la aplicacion
+	        	break;
+	        case R.id.MnuOpc2:
+	        	Intent deHeladosAInstruccionesDeUso = new Intent(Helados.this, InstruccionesDeUso.class );
+	            startActivity(deHeladosAInstruccionesDeUso);
+	        	break;
+	        case R.id.MnuOpc3:
+	        	Intent deHeladosAAcercaDe= new Intent(Helados.this, AcercaDe.class );
+	            startActivity(deHeladosAAcercaDe);
+	        	break;
+	        	}
+	        return true;
+	        }
 	
-	
+	// ***** METODOS *****
+	    
 	//Metodo que formateara todos los datos en solo un String
 	public String formateaDatos(Spinner sabor1,Spinner sabor2,Spinner sabor3,
 			Spinner tamaño,RadioButton tarrina,RadioButton cucurucho,RadioButton copa){

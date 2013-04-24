@@ -15,4 +15,4 @@ Miercoles 17 Abril --> Comienzo el diseño de refrescos.xml , sigo buscando info
 Jueves 18 Abril --> Fallo solucionado. Tiempo: 15 min.
 Sabado 20 Abril --> Rediseño 2 actividades (MenuPrincipal y SeleccionDeProductos) en una sola "MenuPrincipal" , Comienzo a diseña la actividad helados de una manera diferente y creo que lo que tenia hecho de las actividades "cafes" y "refrescos" lo voy a cambiar para hacerlas igual que helados. Tiempo: 2 horas 30 min.
 Domingo 21 Abril --> Relleno con datos los Spinners de Helados.java, modifico los checkbox de Helados.xml(Ahora son un radioGroup) y le doy funcionalidad al boton cancelar. Tiempo: 30 min.
-Lunes 22 Abril --> Añado funcionalidad a los radioButtons de helados.java 
+Lunes 22 Abril --> Añado toda la funcionalidad a helados.java y ya puede enviar datos a MenuPrincipal. Tiempo: 45min.

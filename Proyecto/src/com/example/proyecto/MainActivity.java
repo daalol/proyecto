@@ -22,8 +22,8 @@ public class MainActivity extends Activity {
         	public void onClick(View v){
         		
         		Intent deMainAMenuPrincipal = new Intent (MainActivity.this, MenuPrincipal.class);
-        	
         		startActivity(deMainAMenuPrincipal);
+        		MainActivity.this.finish();
         	}
         });
     }
