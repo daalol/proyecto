@@ -44,14 +44,15 @@ public class MenuPrincipal extends Activity{
                		Intent deMenuPrincipalACafes = new Intent(MenuPrincipal.this,Cafes.class);
                		MenuPrincipal.this.startActivityForResult(deMenuPrincipalACafes,0);
             	}
-            });
+            });*/
             
           final Button refrescos= (Button)findViewById(R.id.refrescos);
             refrescos.setOnClickListener(new OnClickListener(){
             	public void onClick(View v){
-            		
+            		Intent deMenuPrincipalARefrescos = new Intent(MenuPrincipal.this,Refrescos.class);
+               		MenuPrincipal.this.startActivityForResult(deMenuPrincipalARefrescos,0);
             	}
-            });*/
+            });
             
             final Button helados= (Button)findViewById(R.id.helados);
             helados.setOnClickListener(new OnClickListener(){

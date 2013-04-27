@@ -66,7 +66,7 @@ public class Cafes extends Activity {
         		String[] estoEsUnaPrueba= new String[] {"test", "test2","test3"};
         		
         		//Envio el array a Seleccion de productos
-        		Intent deCafesASeleccionProductos=new Intent(Cafes.this,SeleccionProductos.class);
+        		/*Intent deCafesASeleccionProductos=new Intent(Cafes.this,SeleccionProductos.class);
         		
         		//forma parte de la prueba
         		deCafesASeleccionProductos.putExtra("estoEsUnaPrueba", estoEsUnaPrueba);
@@ -74,7 +74,7 @@ public class Cafes extends Activity {
         		deCafesASeleccionProductos.putStringArrayListExtra("datos_pedido", datos_cafes);
         		//deCafesASeleccionProductos.putExtra("datos_pedido", datos_cafes);
            		setResult(Activity.RESULT_OK,deCafesASeleccionProductos);
-           		Cafes.this.finish();
+           		Cafes.this.finish();*/
         	}
         });
         

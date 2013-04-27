@@ -11,12 +11,34 @@
         android:layout_height="wrap_content"
         android:text="Elige tus sabores:    " />
 
+     <Spinner
+        android:id="@+id/spinnerSabor1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1" />
+
+    <Spinner
+        android:id="@+id/spinnerSabor2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerSabor1" />
+    
+    <Spinner
+         android:id="@+id/spinnerSabor3"
+         android:layout_width="250dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/spinnerSabor2"
+         android:visibility="invisible" />
+    
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/sabor1"
-        android:layout_alignBottom="@+id/sabor1"
+        android:layout_alignBaseline="@+id/spinnerSabor1"
+        android:layout_alignBottom="@+id/spinnerSabor1"
         android:layout_alignLeft="@+id/textView3"
         android:text="Sabor 1" />
 
@@ -24,9 +46,9 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/sabor2"
-        android:layout_alignBottom="@+id/sabor2"
-        android:layout_toRightOf="@+id/sabor2"
+        android:layout_alignBaseline="@+id/spinnerSabor2"
+        android:layout_alignBottom="@+id/spinnerSabor2"
+        android:layout_toRightOf="@+id/spinnerSabor2"
         android:text="Sabor 2" />
 
     <TextView
@@ -34,54 +56,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/sabor3"
+        android:layout_below="@+id/spinnerSabor3"
         android:text="Elige el tamaño:     " />
+    
+    <Spinner
+        android:id="@+id/spinnerTamaño"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4" />
     
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/sabor3"
-        android:layout_alignBottom="@+id/sabor3"
+        android:layout_alignBaseline="@+id/spinnerSabor3"
+        android:layout_alignBottom="@+id/spinnerSabor3"
         android:layout_alignLeft="@+id/textView3"
         android:text="Sabor3"
         android:visibility="invisible" />
-
-    <Spinner
-        android:id="@+id/sabor1"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1" />
-
-    <Spinner
-        android:id="@+id/sabor2"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/sabor1" />
-    
-     <Spinner
-         android:id="@+id/sabor3"
-         android:layout_width="250dp"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_below="@+id/sabor2"
-         android:visibility="invisible" />
-
-    <Spinner
-        android:id="@+id/tamaño"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView4" />
 
     <RadioGroup
         android:id="@+id/grupo"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/tamaño"
+        android:layout_below="@+id/spinnerTamaño"
         android:orientation="horizontal" >
 
 		    <RadioButton
@@ -120,7 +120,7 @@
         android:id="@+id/cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tamaño"
+        android:layout_alignRight="@+id/spinnerTamaño"
         android:layout_below="@+id/grupo"
         android:layout_toRightOf="@+id/añadir"
         android:text="Cancelar" />

@@ -38,4 +38,28 @@
         <item>Mediano</item>
         <item>Grande</item>
     </string-array>
+    
+      <string-array name="bebidas">
+        <item>Horchata</item>
+        <item>Horchata Mixta</item>
+        <item>Horchata Granizada</item>
+        <item>Limon granizado</item>
+        <item>Bicicleta</item>
+        <item>Vampiro</item>
+    </string-array>
+    
+   <string-array name="refrescos">
+        <item>Cola 20cc</item>
+        <item>Cola light 20cc</item>
+        <item>Naranja 20cc</item>
+        <item>Limon 20cc</item>
+        <item>Botella agua 33cc</item>
+    </string-array>
+    
+    <string-array name="cervezas">
+        <item>&#8531; Cerveza</item>
+        <item>&#8531; Cerveza premium</item>
+        <item>Caña cerveza</item>
+        <item>1/5 Sin Alcohol</item>
+    </string-array>
 </resources>

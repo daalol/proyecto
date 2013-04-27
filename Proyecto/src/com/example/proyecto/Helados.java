@@ -23,10 +23,10 @@ public class Helados extends Activity{
         
         // ***** SPINNERS ******
         //Inicializo los 4 spinners 
-        final Spinner sabor1 = (Spinner) findViewById(R.id.sabor1);
-		final Spinner sabor2 = (Spinner) findViewById(R.id.sabor2);
-		final Spinner sabor3 = (Spinner) findViewById(R.id.sabor3);
-		final Spinner tamaño = (Spinner) findViewById(R.id.tamaño);
+        final Spinner sabor1 = (Spinner) findViewById(R.id.spinnerSabor1);
+		final Spinner sabor2 = (Spinner) findViewById(R.id.spinnerSabor2);
+		final Spinner sabor3 = (Spinner) findViewById(R.id.spinnerSabor3);
+		final Spinner tamaño = (Spinner) findViewById(R.id.spinnerTamaño);
 		
 		//Configuro los tres adaptadores
 		ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(this, R.array.sabores , android.R.layout.simple_spinner_item);

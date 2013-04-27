@@ -17,3 +17,4 @@ Sabado 20 Abril --> Rediseño 2 actividades (MenuPrincipal y SeleccionDeProducto
 Domingo 21 Abril --> Relleno con datos los Spinners de Helados.java, modifico los checkbox de Helados.xml(Ahora son un radioGroup) y le doy funcionalidad al boton cancelar. Tiempo: 30 min.
 Lunes 22 Abril --> Añado toda la funcionalidad a helados.java y ya puede enviar datos a MenuPrincipal. Tiempo: 45min.
 Miercoles 24 Abril --> Arreglo algunos errores y borro algunos archivos que no se van a usar. Tiempo: 20 min
+Sabado 26 Abril --> Rediseño refrescos.xml, Añado funcionalidades a Refrescos.java(Aun faltan cosas), renombro algunos parametros de helados.xml, soluciono algun pequeño fallo del proyecto y borro SeleccionProductos.java que me falto por borrar la ultima vez. Tiempo 1 hora 15 min.
