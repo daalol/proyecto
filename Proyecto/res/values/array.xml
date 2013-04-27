@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <!-- Para "Helados" -->
     <string-array name="sabores">
         <item>Chocolate</item>
         <item>Vainilla</item>
@@ -33,12 +35,7 @@
         <item>Caramelo</item>
     </string-array>
     
-    <string-array name="tamaño">
-        <item>Pequeño</item>
-        <item>Mediano</item>
-        <item>Grande</item>
-    </string-array>
-    
+    <!-- Para "Refrescos" -->
       <string-array name="bebidas">
         <item>Horchata</item>
         <item>Horchata Mixta</item>
@@ -61,5 +58,27 @@
         <item>&#8531; Cerveza premium</item>
         <item>Caña cerveza</item>
         <item>1/5 Sin Alcohol</item>
+    </string-array>
+    
+    <!-- Para "Bolleria" -->
+    <string-array name="dulce">
+        <item>Fartons</item>
+        <item>Napolitana chocolate</item>
+        <item>Flauta de chocolate</item>
+        <item>Croisant chocolate</item>
+        <item>Ensaimada</item>
+    </string-array>
+    
+    <string-array name="salado">
+        <item>Croisant york/queso</item>
+        <item>Napolitana york/queso</item>
+        <item>Rosquilletas</item>
+    </string-array>
+    
+    <!-- Generales para todo el proyecto -->
+    <string-array name="tamaño">
+        <item>Pequeño</item>
+        <item>Mediano</item>
+        <item>Grande</item>
     </string-array>
 </resources>

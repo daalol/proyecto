@@ -130,7 +130,7 @@ public class Helados extends Activity{
 	public String formateaDatos(Spinner sabor1,Spinner sabor2,Spinner sabor3,
 			Spinner tamaño,RadioButton tarrina,RadioButton cucurucho,RadioButton copa){
 		
-		String formato=estaPulsado(tarrina,cucurucho,copa);
+		    String formato=estaPulsado(tarrina,cucurucho,copa);
 			
 			if(formato.equals("Copa")){
 				return formato+": "+sabor1.getSelectedItem().toString()+" "

@@ -29,6 +29,7 @@
         <activity android:name=".Cafes"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Refrescos"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Helados"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".Bolleria"  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

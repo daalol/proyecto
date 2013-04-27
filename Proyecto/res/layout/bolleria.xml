@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#a6c53b" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/dulce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Dulce" />
+
+        <RadioButton
+            android:id="@+id/salado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salado" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerDulce"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radioGroup1" />
+
+    <CheckBox
+        android:id="@+id/checkDulce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerDulce"
+        android:text="Caliente" />
+
+    <Spinner
+        android:id="@+id/spinnerSalado"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkDulce" />
+
+    <CheckBox
+        android:id="@+id/checkSalado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerSalado"
+        android:text="Caliente" />
+
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_below="@+id/checkSalado"
+        android:layout_toRightOf="@+id/checkSalado"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cantidad"
+        android:layout_alignBottom="@+id/cantidad"
+        android:layout_alignParentLeft="true"
+        android:text="Cantidad:" />
+    
+      <Button
+          android:id="@+id/añadir"
+          android:layout_width="125dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/cantidad"
+          android:text="Añadir" />
+
+    <Button
+        android:id="@+id/cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spinnerSalado"
+        android:layout_below="@+id/cantidad"
+        android:layout_toRightOf="@+id/añadir"
+        android:text="Cancelar" />
+
+</RelativeLayout>

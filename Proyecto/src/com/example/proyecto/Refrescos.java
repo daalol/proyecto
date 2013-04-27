@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Refrescos extends Activity{
 
@@ -43,6 +45,62 @@ public class Refrescos extends Activity{
 		//Spinners inicializados con todo tipo de bebidas que hay en array.xml
         
 		
+		// ****** RADIO BUTTONS ******
+				final RadioButton RBBebidas= (RadioButton)findViewById(R.id.bebidas);
+				final RadioButton RBRefrescos= (RadioButton)findViewById(R.id.refrescos);
+				final RadioButton RBCervezas= (RadioButton)findViewById(R.id.cervezas);
+				final TextView textView1= (TextView)findViewById(R.id.textView1);
+				final TextView textView2= (TextView)findViewById(R.id.textView2);
+				final TextView textView3= (TextView)findViewById(R.id.textView3);
+				final TextView textView4= (TextView)findViewById(R.id.textView4);
+				
+				RBBebidas.setOnClickListener(new OnClickListener(){
+					public void onClick(View v){
+						//elementos visibles
+		           		bebidas.setVisibility(v.VISIBLE);
+		           		tamaño.setVisibility(v.VISIBLE);
+		           		textView1.setVisibility(v.VISIBLE);
+		           		textView4.setVisibility(v.VISIBLE);
+		           		
+		           		//elementos invisibles
+		           		textView2.setVisibility(v.INVISIBLE);
+		           		textView3.setVisibility(v.INVISIBLE);
+		           		refrescos.setVisibility(v.INVISIBLE);
+		           		cervezas.setVisibility(v.INVISIBLE);
+		        	}
+				});
+				RBRefrescos.setOnClickListener(new OnClickListener(){
+					public void onClick(View v){
+						//elementos visibles
+		           		refrescos.setVisibility(v.VISIBLE);
+		           		textView2.setVisibility(v.VISIBLE);
+		           		
+		           		//elementos invisibles
+		           		bebidas.setVisibility(v.INVISIBLE);
+		           		tamaño.setVisibility(v.INVISIBLE);
+		           		textView1.setVisibility(v.INVISIBLE);
+		           		textView4.setVisibility(v.INVISIBLE);
+		           		textView3.setVisibility(v.INVISIBLE);
+		           		cervezas.setVisibility(v.INVISIBLE);
+		        	}
+				});
+				RBCervezas.setOnClickListener(new OnClickListener(){
+					public void onClick(View v){
+						//elementos visibles
+						cervezas.setVisibility(v.VISIBLE);
+						textView3.setVisibility(v.VISIBLE);
+						
+		           		//elementos invisibles
+						bebidas.setVisibility(v.INVISIBLE);
+		           		tamaño.setVisibility(v.INVISIBLE);
+		           		textView1.setVisibility(v.INVISIBLE);
+		           		textView4.setVisibility(v.INVISIBLE);
+		           		textView2.setVisibility(v.INVISIBLE);
+		           		refrescos.setVisibility(v.INVISIBLE);
+		           		
+		        	}
+				});
+		
      // ****** BOTONES ******
      		//Boton cancelar, sirve para cerrar esta actividad sin enviar nada
              final Button cancelar= (Button)findViewById(R.id.cancelar);
@@ -59,11 +117,46 @@ public class Refrescos extends Activity{
 
              		Intent deRefrescosAMenuPrincipal=new Intent(Refrescos.this,MenuPrincipal.class);
              		
-             		deRefrescosAMenuPrincipal.putExtra("datos_pedido","");
+             		deRefrescosAMenuPrincipal.putExtra("datos_pedido",
+             				formateaDatos(bebidas,refrescos,cervezas,tamaño,RBBebidas,RBRefrescos,
+             						 RBCervezas));
              			
                 		setResult(Activity.RESULT_OK,deRefrescosAMenuPrincipal);
                 		Refrescos.this.finish();
              	}
              });
 	}
+	
+	// ***** METODOS *****
+    
+		//Metodo que formateara todos los datos en solo un String
+	public String formateaDatos(Spinner bebidas,Spinner refrescos,Spinner cervezas,
+			Spinner tamaño,RadioButton RBBebidas,RadioButton RBRefrescos,
+			RadioButton RBCervezas){
+		
+	    	String formato=estaPulsado(RBBebidas,RBRefrescos,RBCervezas);
+	    	if(formato.equals("Bebidas")){
+	    		return bebidas.getSelectedItem().toString()+" "+tamaño.getSelectedItem().toString();
+	    	}
+	    	else if(formato.equals("Refrescos")){
+	    		return refrescos.getSelectedItem().toString();
+	    	}
+	    	else return cervezas.getSelectedItem().toString();
+	}
+	
+	//Metodo que chequeara que radioButton esta pulsado y devolvera un String
+			public String estaPulsado(RadioButton RBBebidas,RadioButton RBRefrescos,
+					RadioButton RBCervezas){
+				if(RBBebidas.isChecked()){
+					return "Bebidas";
+				}
+				else if(RBRefrescos.isChecked()){
+					return "Refrescos";
+				}
+				else{
+					return "Cervezas";
+				}
+				
+			}
+		//Fin metodos
 }
