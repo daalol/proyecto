@@ -25,13 +25,21 @@
             android:layout_height="wrap_content"
             android:text="Salado" />
     </RadioGroup>
+    
+     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radioGroup1"
+        android:text="Bolleria dulce:" />
 
     <Spinner
         android:id="@+id/spinnerDulce"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/radioGroup1" />
+        android:layout_below="@+id/textView2" />
 
     <CheckBox
         android:id="@+id/checkDulce"
@@ -41,12 +49,22 @@
         android:layout_below="@+id/spinnerDulce"
         android:text="Caliente" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkDulce"
+        android:text="Bolleria salada:"
+        android:visibility="invisible" />
+    
     <Spinner
         android:id="@+id/spinnerSalado"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkDulce" />
+        android:layout_below="@+id/textView3"
+        android:visibility="invisible" />
 
     <CheckBox
         android:id="@+id/checkSalado"
@@ -54,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spinnerSalado"
-        android:text="Caliente" />
+        android:text="Caliente"
+        android:visibility="invisible" />
 
     <EditText
         android:id="@+id/cantidad"
@@ -64,7 +83,8 @@
         android:layout_below="@+id/checkSalado"
         android:layout_toRightOf="@+id/checkSalado"
         android:ems="10"
-        android:inputType="number" >
+        android:inputType="number"
+        android:text="1" >
 
         <requestFocus />
     </EditText>
@@ -94,5 +114,7 @@
         android:layout_below="@+id/cantidad"
         android:layout_toRightOf="@+id/añadir"
         android:text="Cancelar" />
+
+   
 
 </RelativeLayout>
