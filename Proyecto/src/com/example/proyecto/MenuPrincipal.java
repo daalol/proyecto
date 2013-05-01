@@ -69,14 +69,15 @@ public class MenuPrincipal extends Activity{
                		MenuPrincipal.this.startActivityForResult(deMenuPrincipalABolleria,0);
             	}
             });
-            /*
+            
             final Button combinados= (Button)findViewById(R.id.combinados);
-            cafes.setOnClickListener(new OnClickListener(){
+            combinados.setOnClickListener(new OnClickListener(){
             	public void onClick(View v){
-            		
+            		Intent deMenuPrincipalACombinadosCafe = new Intent(MenuPrincipal.this,CombinadosCafe.class);
+               		MenuPrincipal.this.startActivityForResult(deMenuPrincipalACombinadosCafe,0);
             	}
             });
-            
+            /*
             final Button especialidades= (Button)findViewById(R.id.especialidades);
             especialidades.setOnClickListener(new OnClickListener(){
             	public void onClick(View v){

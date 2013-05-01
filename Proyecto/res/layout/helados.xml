@@ -5,10 +5,41 @@
     android:layout_height="fill_parent"
     android:background="#a6c53b" >
 
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/textView3"
+        android:orientation="horizontal" >
+
+		    <RadioButton
+		        android:id="@+id/tarrina"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:checked="true"
+		        android:text="Tarrina"
+		        android:onClick="onRadioButtonClicked" />
+		
+		    <RadioButton
+		        android:id="@+id/cucurucho"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Cucurucho"
+		        android:onClick="onRadioButtonClicked" />
+		
+		    <RadioButton
+		        android:id="@+id/copa"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Copa"
+		        android:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/grupo"
         android:text="Elige tus sabores:    " />
 
      <Spinner
@@ -76,36 +107,27 @@
         android:text="Sabor3"
         android:visibility="invisible" />
 
-    <RadioGroup
-        android:id="@+id/grupo"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/spinnerTamaño"
-        android:orientation="horizontal" >
+     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cantidad"
+        android:layout_alignBottom="@+id/cantidad"
+        android:layout_alignParentLeft="true"
+        android:text="Cantidad:" />
+    
+     <EditText
+         android:id="@+id/cantidad"
+         android:layout_width="60dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/spinnerTamaño"
+         android:layout_toRightOf="@+id/textView6"
+         android:ems="10"
+         android:inputType="number"
+         android:text="1" >
 
-		    <RadioButton
-		        android:id="@+id/tarrina"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:checked="true"
-		        android:text="Tarrina"
-		        android:onClick="onRadioButtonClicked" />
-		
-		    <RadioButton
-		        android:id="@+id/cucurucho"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="Cucurucho"
-		        android:onClick="onRadioButtonClicked" />
-		
-		    <RadioButton
-		        android:id="@+id/copa"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="Copa"
-		        android:onClick="onRadioButtonClicked" />
-    </RadioGroup>
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/añadir"
@@ -113,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/grupo"
+        android:layout_below="@+id/cantidad"
         android:text="Añadir" />
 
     <Button
@@ -121,7 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/spinnerTamaño"
-        android:layout_below="@+id/grupo"
+        android:layout_below="@+id/cantidad"
         android:layout_toRightOf="@+id/añadir"
         android:text="Cancelar" />
 

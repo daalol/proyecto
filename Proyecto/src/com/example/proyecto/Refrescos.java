@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -19,10 +20,10 @@ public class Refrescos extends Activity{
         
      // ***** SPINNERS ******
         //Inicializo los 4 spinners 
-        final Spinner bebidas = (Spinner) findViewById(R.id.spinnerBebidas);
-		final Spinner refrescos = (Spinner) findViewById(R.id.spinnerRefrescos);
-		final Spinner cervezas = (Spinner) findViewById(R.id.spinnerCervezas);
-		final Spinner tamaño = (Spinner) findViewById(R.id.spinnerTamaño);
+        final Spinner spinnerBebidas = (Spinner) findViewById(R.id.spinnerBebidas);
+		final Spinner spinnerRefrescos = (Spinner) findViewById(R.id.spinnerRefrescos);
+		final Spinner spinnerCervezas = (Spinner) findViewById(R.id.spinnerCervezas);
+		final Spinner spinnerTamaño = (Spinner) findViewById(R.id.spinnerTamaño);
 		
 		//Configuro los cuatro adaptadores
 		ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(this, R.array.bebidas , android.R.layout.simple_spinner_item);
@@ -38,10 +39,10 @@ public class Refrescos extends Activity{
 		adaptador4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
 		
 		//Coloco los adaptadores en su elemento correspondiente
-		bebidas.setAdapter(adaptador);
-		refrescos.setAdapter(adaptador2);
-		cervezas.setAdapter(adaptador3);
-		tamaño.setAdapter(adaptador4);
+		spinnerBebidas.setAdapter(adaptador);
+		spinnerRefrescos.setAdapter(adaptador2);
+		spinnerCervezas.setAdapter(adaptador3);
+		spinnerTamaño.setAdapter(adaptador4);
 		//Spinners inicializados con todo tipo de bebidas que hay en array.xml
         
 		
@@ -57,46 +58,46 @@ public class Refrescos extends Activity{
 				RBBebidas.setOnClickListener(new OnClickListener(){
 					public void onClick(View v){
 						//elementos visibles
-		           		bebidas.setVisibility(v.VISIBLE);
-		           		tamaño.setVisibility(v.VISIBLE);
+		           		spinnerBebidas.setVisibility(v.VISIBLE);
+		           		spinnerTamaño.setVisibility(v.VISIBLE);
 		           		textView1.setVisibility(v.VISIBLE);
 		           		textView4.setVisibility(v.VISIBLE);
 		           		
 		           		//elementos invisibles
 		           		textView2.setVisibility(v.INVISIBLE);
 		           		textView3.setVisibility(v.INVISIBLE);
-		           		refrescos.setVisibility(v.INVISIBLE);
-		           		cervezas.setVisibility(v.INVISIBLE);
+		           		spinnerRefrescos.setVisibility(v.INVISIBLE);
+		           		spinnerCervezas.setVisibility(v.INVISIBLE);
 		        	}
 				});
 				RBRefrescos.setOnClickListener(new OnClickListener(){
 					public void onClick(View v){
 						//elementos visibles
-		           		refrescos.setVisibility(v.VISIBLE);
+		           		spinnerRefrescos.setVisibility(v.VISIBLE);
 		           		textView2.setVisibility(v.VISIBLE);
 		           		
 		           		//elementos invisibles
-		           		bebidas.setVisibility(v.INVISIBLE);
-		           		tamaño.setVisibility(v.INVISIBLE);
+		           		spinnerBebidas.setVisibility(v.INVISIBLE);
+		           		spinnerTamaño.setVisibility(v.INVISIBLE);
 		           		textView1.setVisibility(v.INVISIBLE);
 		           		textView4.setVisibility(v.INVISIBLE);
 		           		textView3.setVisibility(v.INVISIBLE);
-		           		cervezas.setVisibility(v.INVISIBLE);
+		           		spinnerCervezas.setVisibility(v.INVISIBLE);
 		        	}
 				});
 				RBCervezas.setOnClickListener(new OnClickListener(){
 					public void onClick(View v){
 						//elementos visibles
-						cervezas.setVisibility(v.VISIBLE);
+						spinnerCervezas.setVisibility(v.VISIBLE);
 						textView3.setVisibility(v.VISIBLE);
 						
 		           		//elementos invisibles
-						bebidas.setVisibility(v.INVISIBLE);
-		           		tamaño.setVisibility(v.INVISIBLE);
+						spinnerBebidas.setVisibility(v.INVISIBLE);
+		           		spinnerTamaño.setVisibility(v.INVISIBLE);
 		           		textView1.setVisibility(v.INVISIBLE);
 		           		textView4.setVisibility(v.INVISIBLE);
 		           		textView2.setVisibility(v.INVISIBLE);
-		           		refrescos.setVisibility(v.INVISIBLE);
+		           		spinnerRefrescos.setVisibility(v.INVISIBLE);
 		           		
 		        	}
 				});
@@ -118,7 +119,7 @@ public class Refrescos extends Activity{
              		Intent deRefrescosAMenuPrincipal=new Intent(Refrescos.this,MenuPrincipal.class);
              		
              		deRefrescosAMenuPrincipal.putExtra("datos_pedido",
-             				formateaDatos(bebidas,refrescos,cervezas,tamaño,RBBebidas,RBRefrescos,
+             				formateaDatos(spinnerBebidas,spinnerRefrescos,spinnerCervezas,spinnerTamaño,RBBebidas,RBRefrescos,
              						 RBCervezas));
              			
                 		setResult(Activity.RESULT_OK,deRefrescosAMenuPrincipal);
@@ -130,18 +131,21 @@ public class Refrescos extends Activity{
 	// ***** METODOS *****
     
 		//Metodo que formateara todos los datos en solo un String
-	public String formateaDatos(Spinner bebidas,Spinner refrescos,Spinner cervezas,
-			Spinner tamaño,RadioButton RBBebidas,RadioButton RBRefrescos,
+	public String formateaDatos(Spinner spinnerBebidas,Spinner spinnerRefrescos,Spinner spinnerCervezas,
+			Spinner spinnerTamaño,RadioButton RBBebidas,RadioButton RBRefrescos,
 			RadioButton RBCervezas){
 		
+			final EditText cantidad= (EditText)findViewById(R.id.cantidad);
 	    	String formato=estaPulsado(RBBebidas,RBRefrescos,RBCervezas);
+	    	
 	    	if(formato.equals("Bebidas")){
-	    		return bebidas.getSelectedItem().toString()+" "+tamaño.getSelectedItem().toString();
+	    		return spinnerBebidas.getSelectedItem().toString()+" "+spinnerTamaño.getSelectedItem().toString()
+	    				+". Cantidad: "+cantidad.getText().toString();
 	    	}
 	    	else if(formato.equals("Refrescos")){
-	    		return refrescos.getSelectedItem().toString();
+	    		return spinnerRefrescos.getSelectedItem().toString()+". Cantidad: "+cantidad.getText().toString();
 	    	}
-	    	else return cervezas.getSelectedItem().toString();
+	    	else return spinnerCervezas.getSelectedItem().toString()+". Cantidad: "+cantidad.getText().toString();
 	}
 	
 	//Metodo que chequeara que radioButton esta pulsado y devolvera un String

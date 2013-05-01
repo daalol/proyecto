@@ -13,107 +13,68 @@
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/dulce"
+            android:id="@+id/radio0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Dulce" />
+            android:text="Cafe frio" />
 
         <RadioButton
-            android:id="@+id/salado"
+            android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salado" />
+            android:text="Cafe caliente" />
     </RadioGroup>
-    
-     <TextView
-        android:id="@+id/textView2"
+
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/radioGroup1"
-        android:text="Bolleria dulce:" />
+        android:text="Combinados cafe frio:" />
 
     <Spinner
-        android:id="@+id/spinnerDulce"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2" />
-
-    <CheckBox
-        android:id="@+id/checkDulce"
+        android:id="@+id/spinner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinnerDulce"
-        android:text="Caliente" />
+        android:layout_below="@+id/textView1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/checkDulce"
-        android:text="Bolleria salada:"
-        android:visibility="invisible" />
-    
-    <Spinner
-        android:id="@+id/spinnerSalado"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/spinner1"
+        android:text="Combinados cafe caliente:"
         android:visibility="invisible" />
 
-    <CheckBox
-        android:id="@+id/checkSalado"
+    <Spinner
+        android:id="@+id/spinner2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinnerSalado"
-        android:text="Caliente"
+        android:layout_below="@+id/textView2"
         android:visibility="invisible" />
 
     <EditText
         android:id="@+id/cantidad"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkSalado"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_below="@+id/spinner2"
+        android:layout_toRightOf="@+id/textView3"
         android:ems="10"
         android:inputType="number"
-        android:text="1" >
-
-        <requestFocus />
-    </EditText>
+        android:text="1" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/cantidad"
         android:layout_alignBottom="@+id/cantidad"
         android:layout_alignParentLeft="true"
         android:text="Cantidad:" />
-    
-      <Button
-          android:id="@+id/añadir"
-          android:layout_width="125dp"
-          android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
-          android:layout_below="@+id/cantidad"
-          android:text="Añadir" />
-
-    <Button
-        android:id="@+id/cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/spinnerSalado"
-        android:layout_below="@+id/cantidad"
-        android:layout_toRightOf="@+id/añadir"
-        android:text="Cancelar" />
-
-   
 
 </RelativeLayout>

@@ -20,3 +20,4 @@ Miercoles 24 Abril --> Arreglo algunos errores y borro algunos archivos que no s
 Sabado 26 Abril --> Rediseño refrescos.xml, Añado funcionalidades a Refrescos.java(Aun faltan cosas), renombro algunos parametros de helados.xml, soluciono algun pequeño fallo del proyecto y borro SeleccionProductos.java que me falto por borrar la ultima vez. Tiempo 1 hora 15 min.
 Sabado 26 Abril --> Termino la funcionalidad de refrescos.java y empiezo con bolleria. Tiempo: 30min.
 Lunes 28 Abril --> Termino el .xml y el .java de bolleria. Para el proximo dia, tengo que renombrar varias variables anteriores y añadir "cantidad" a los apartados ya hechos. Tiempo: 45 min.
+Miercoles 1 Mayo --> Termino de añadir "cantidad" a los apartados ya hechos, renombro algunas variables para que se entienda el codigo mejor y creo el .xml y el .java de "combinados de cafe" Tiempo: 1 hora.

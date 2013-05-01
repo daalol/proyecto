@@ -43,8 +43,8 @@
 
     <Spinner
         android:id="@+id/spinnerBebidas"
-        android:layout_height="wrap_content"
         android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView1"
         android:visibility="visible" />
@@ -55,30 +55,29 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerBebidas"
         android:text="Elige el tamaño:" />
-    
+
     <Spinner
         android:id="@+id/spinnerTamaño"
-        android:layout_height="wrap_content"
         android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView4"
         android:visibility="visible" />
 
-
-     <TextView
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spinnerTamaño"
-        android:text="Refrescos"
+        android:text="Refrescos:                        "
         android:visibility="invisible" />
 
     <Spinner
         android:id="@+id/spinnerRefrescos"
-        android:layout_height="wrap_content"
         android:layout_width="250dp"
-        android:layout_alignParentLeft="true" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView2"
         android:visibility="invisible" />
 
@@ -93,19 +92,31 @@
 
     <Spinner
         android:id="@+id/spinnerCervezas"
-		android:layout_width="250dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView3"
         android:visibility="invisible" />
 
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/spinnerCervezas"
+        android:layout_toRightOf="@+id/textView5"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1" />
+
+    
     <Button
         android:id="@+id/añadir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/spinnerCervezas"
+        android:layout_below="@+id/cantidad"
         android:text="Añadir" />
 
     <Button
@@ -113,10 +124,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/spinnerCervezas"
-        android:layout_below="@+id/spinnerCervezas"
+        android:layout_below="@+id/cantidad"
         android:layout_toRightOf="@+id/añadir"
         android:text="Cancelar" />
+    
 
-
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cantidad"
+        android:layout_alignBottom="@+id/cantidad"
+        android:layout_alignParentLeft="true"
+        android:text="Cantidad:" />
 
 </RelativeLayout> 

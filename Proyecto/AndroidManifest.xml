@@ -25,7 +25,7 @@
         <activity android:name=".AcercaDe"  android:screenOrientation="portrait"></activity>
         <activity android:name=".InstruccionesDeUso"  android:screenOrientation="portrait"></activity>
         <activity android:name=".MenuPrincipal"  android:screenOrientation="portrait"></activity>
-        <activity android:name=".SeleccionProductos"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".CombinadosCafe"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Cafes"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Refrescos"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Helados"  android:screenOrientation="portrait"></activity>

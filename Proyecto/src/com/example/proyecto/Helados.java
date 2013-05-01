@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -130,15 +131,17 @@ public class Helados extends Activity{
 	public String formateaDatos(Spinner sabor1,Spinner sabor2,Spinner sabor3,
 			Spinner tamaño,RadioButton tarrina,RadioButton cucurucho,RadioButton copa){
 		
+			final EditText cantidad= (EditText)findViewById(R.id.cantidad);
 		    String formato=estaPulsado(tarrina,cucurucho,copa);
 			
 			if(formato.equals("Copa")){
 				return formato+": "+sabor1.getSelectedItem().toString()+" "
-						+sabor2.getSelectedItem().toString()+" "+sabor3.getSelectedItem().toString();
+						+sabor2.getSelectedItem().toString()+" "+sabor3.getSelectedItem().toString()
+						+". Cantidad: "+cantidad.getText().toString();
 			}
 			else{
 			return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()+" "
-					+sabor2.getSelectedItem().toString();
+					+sabor2.getSelectedItem().toString()+". Cantidad: "+cantidad.getText().toString();
 			}
 		
 	}
