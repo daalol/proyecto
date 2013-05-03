@@ -136,7 +136,7 @@ public class Refrescos extends Activity{
 			RadioButton RBCervezas){
 		
 			final EditText cantidad= (EditText)findViewById(R.id.cantidad);
-	    	String formato=estaPulsado(RBBebidas,RBRefrescos,RBCervezas);
+	    	String formato=estaPulsado(RBBebidas,RBRefrescos);
 	    	
 	    	if(formato.equals("Bebidas")){
 	    		return spinnerBebidas.getSelectedItem().toString()+" "+spinnerTamaño.getSelectedItem().toString()
@@ -149,8 +149,7 @@ public class Refrescos extends Activity{
 	}
 	
 	//Metodo que chequeara que radioButton esta pulsado y devolvera un String
-			public String estaPulsado(RadioButton RBBebidas,RadioButton RBRefrescos,
-					RadioButton RBCervezas){
+			public String estaPulsado(RadioButton RBBebidas,RadioButton RBRefrescos){
 				if(RBBebidas.isChecked()){
 					return "Bebidas";
 				}

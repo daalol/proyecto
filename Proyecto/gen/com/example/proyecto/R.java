@@ -65,6 +65,7 @@ public final class R {
         public static final int borrar=0x7f080044;
         public static final int borrar_todo=0x7f080043;
         public static final int boton_realizar=0x7f080002;
+        public static final int brownies=0x7f08002d;
         public static final int cafe_con_leche=0x7f080014;
         public static final int cafe_solo=0x7f080011;
         public static final int cafe_tiempo=0x7f080016;
@@ -84,16 +85,15 @@ public final class R {
         public static final int combinados=0x7f08003f;
         public static final int copa=0x7f080035;
         public static final int cortado=0x7f080012;
+        public static final int creppes=0x7f08002c;
         public static final int cucurucho=0x7f080034;
         public static final int descripcion=0x7f080022;
         public static final int dulce=0x7f080004;
         public static final int enviar_al_camarero=0x7f080045;
         public static final int especialidades=0x7f080040;
+        public static final int gofres=0x7f08002b;
         public static final int grupo=0x7f080032;
         public static final int helados=0x7f08003d;
-        public static final int radio0=0x7f08002b;
-        public static final int radio1=0x7f08002c;
-        public static final int radio2=0x7f08002d;
         public static final int radioGroup1=0x7f080003;
         public static final int refrescos=0x7f08003c;
         public static final int relativeLayout1=0x7f080010;
