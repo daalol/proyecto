@@ -77,13 +77,14 @@ public class MenuPrincipal extends Activity{
                		MenuPrincipal.this.startActivityForResult(deMenuPrincipalACombinadosCafe,0);
             	}
             });
-            /*
+           
             final Button especialidades= (Button)findViewById(R.id.especialidades);
             especialidades.setOnClickListener(new OnClickListener(){
             	public void onClick(View v){
-            		
+            		Intent deMenuPrincipalAEspecialidades = new Intent(MenuPrincipal.this,Especialidades.class);
+               		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAEspecialidades,0);
             	}
-            });*/
+            });
             
         // *** FIN BOTONES DE PRODUCTOS ***
 

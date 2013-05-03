@@ -2,21 +2,6 @@
 <resources>
     
     <!-- Para "Helados" -->
-    <string-array name="sabores">
-        <item>Chocolate</item>
-        <item>Vainilla</item>
-        <item>Fresa</item>
-        <item>Strachatella</item>
-        <item>Leche Merengada</item>
-        <item>Limon</item>
-        <item>Mora</item>
-        <item>Platano</item>
-        <item>Nata</item>
-        <item>Nutella</item>
-        <item>Chocolate blanco</item>
-        <item>Tutti fruti</item>
-        <item>Caramelo</item>
-    </string-array>
     
     <string-array name="sabores2">
         <item></item>
@@ -74,7 +59,64 @@
         <item>Napolitana york/queso</item>
     </string-array>
     
+    <!-- Para "Combinados de cafe" -->
+    <string-array name="caliente">
+        <item>Bayliss</item>
+        <item>Angelico</item>
+        <item>Bombonella</item>
+        <item>Escoces</item>
+        <item>Irlandes</item>
+    </string-array>
+    
+    <string-array name="frio">
+        <item>Bomboncito</item>
+        <item>Blanco y negro</item>
+        <item>Ruso</item>
+        <item>Nacional</item>
+        <item>Marianella</item>
+    </string-array>
+    
+    <!-- Para "Especialidades" -->
+    <string-array name="gofres_brownies">
+        <item>Chocolate</item>
+        <item>Chocolate y Nata</item>
+		<item>Nata</item>
+        <item>Helado</item>
+        <item>Chocolate y Helado</item>
+        <item>Nata y Helado</item>
+        <item>Chocolate, Nata y Helado</item>
+    </string-array>
+    
+    <string-array name="creppes">
+        <item>Chocolate</item>
+        <item>Chocolate y Nata</item>
+		<item>Nata</item>
+        <item>Helado</item>
+        <item>Chocolate y Helado</item>
+        <item>Nata y Helado</item>
+        <item>Chocolate, Nata y Helado</item>
+        <item>Platano, Nata y Chocolate</item>
+        <item>York queso</item>
+    </string-array>
+    
     <!-- Generales para todo el proyecto -->
+    
+     <string-array name="sabores">
+        <item>Chocolate</item>
+        <item>Vainilla</item>
+        <item>Fresa</item>
+        <item>Strachatella</item>
+        <item>Leche Merengada</item>
+        <item>Limon</item>
+        <item>Mora</item>
+        <item>Platano</item>
+        <item>Nata</item>
+        <item>Nutella</item>
+        <item>Chocolate blanco</item>
+        <item>Tutti fruti</item>
+        <item>Caramelo</item>
+    </string-array>
+    
     <string-array name="tamaño">
         <item>Pequeño</item>
         <item>Mediano</item>
