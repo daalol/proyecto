@@ -38,13 +38,13 @@ public class MenuPrincipal extends Activity{
         //*** FIN LISTVIEW ***
         	
         // *** BOTONES DE PRODUCTOS ***
-         /*   final Button cafes= (Button)findViewById(R.id.cafes);
+           final Button cafes= (Button)findViewById(R.id.cafes);
             cafes.setOnClickListener(new OnClickListener(){
             	public void onClick(View v){
                		Intent deMenuPrincipalACafes = new Intent(MenuPrincipal.this,Cafes.class);
                		MenuPrincipal.this.startActivityForResult(deMenuPrincipalACafes,0);
             	}
-            });*/
+            });
             
           final Button refrescos= (Button)findViewById(R.id.refrescos);
             refrescos.setOnClickListener(new OnClickListener(){
