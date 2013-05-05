@@ -60,7 +60,7 @@
         android:text="Alguna cosa mas (Corto de cafe, manchado...):" />
 
     <EditText
-        android:id="@+id/EditTextMas"
+        android:id="@+id/editTextMas"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/EditTextMas"
+        android:layout_below="@+id/editTextMas"
         android:text="Alcohol:"
         android:visibility="invisible" />
 

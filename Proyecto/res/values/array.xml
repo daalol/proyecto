@@ -99,6 +99,33 @@
         <item>York queso</item>
     </string-array>
     
+    <!-- Para cafes -->
+    <string-array name="cafes">
+        <item>Cafe solo</item>
+        <item>Cortado</item>
+        <item>Cafe con leche</item>
+        <item>Carajillo</item>
+        <item>Capuchinno</item>
+    </string-array>
+    
+    <string-array name="tocados">
+        <item>Bayliss</item>
+        <item>Angelico</item>
+        <item>Whisky</item>
+        <item>Coñac</item>
+        <item>Ron</item>
+        <item>Vodka</item>
+    </string-array>
+    
+    <!-- Para Enviar -->
+    
+        <string-array name="mesas">
+        <item>Mesa 1</item>
+        <item>Mesa 2</item>
+        <item>Mesa 3</item>
+        <item>Mesa 4</item>
+    </string-array>
+    
     <!-- Generales para todo el proyecto -->
     
      <string-array name="sabores">

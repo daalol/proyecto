@@ -95,9 +95,9 @@ public class MenuPrincipal extends Activity{
         enviar_al_camarero.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		
-        		/*Intent intent2 = new Intent (MenuPrincipal.this, laclase.class);
-        	
-        		startActivity(intent1);*/
+        		Intent deMenuPrincipalAEnviar = new Intent(MenuPrincipal.this,Enviar.class);
+           		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAEnviar,0);
+           		
         	}
         });
         // *** FIN ENVIO DE DATOS ***

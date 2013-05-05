@@ -12,6 +12,9 @@ public final class R {
         /**  Para "Refrescos" 
          */
         public static final int bebidas=0x7f040001;
+        /**  Para cafes 
+         */
+        public static final int cafes=0x7f04000a;
         /**  Para "Combinados de cafe" 
          */
         public static final int caliente=0x7f040006;
@@ -24,15 +27,19 @@ public final class R {
         /**  Para "Especialidades" 
          */
         public static final int gofres_brownies=0x7f040008;
+        /**  Para Enviar 
+         */
+        public static final int mesas=0x7f04000c;
         public static final int refrescos=0x7f040002;
         /**  Generales para todo el proyecto 
          */
-        public static final int sabores=0x7f04000a;
+        public static final int sabores=0x7f04000d;
         /**  Para "Helados" 
          */
         public static final int sabores2=0x7f040000;
         public static final int salado=0x7f040005;
-        public static final int tamaño=0x7f04000b;
+        public static final int tamaño=0x7f04000e;
+        public static final int tocados=0x7f04000b;
     }
     public static final class attr {
     }
@@ -51,25 +58,24 @@ public final class R {
         public static final int ic_refresco=0x7f02000b;
     }
     public static final class id {
-        public static final int EditTextMas=0x7f080015;
-        public static final int LstOpciones=0x7f080036;
-        public static final int MnuOpc1=0x7f08003f;
-        public static final int MnuOpc2=0x7f080040;
-        public static final int MnuOpc3=0x7f080041;
+        public static final int LstOpciones=0x7f080038;
+        public static final int MnuOpc1=0x7f080041;
+        public static final int MnuOpc2=0x7f080042;
+        public static final int MnuOpc3=0x7f080043;
         public static final int RBCaliente=0x7f080019;
         public static final int RBFrio=0x7f080018;
         public static final int RelativeLayout1=0x7f080000;
         public static final int añadir=0x7f08000e;
-        public static final int bebidas=0x7f08003a;
-        public static final int bolleria=0x7f080032;
-        public static final int borrar=0x7f080038;
-        public static final int borrar_todo=0x7f080037;
+        public static final int bebidas=0x7f08003c;
+        public static final int bolleria=0x7f080034;
+        public static final int borrar=0x7f08003a;
+        public static final int borrar_todo=0x7f080039;
         public static final int boton_realizar=0x7f080002;
-        public static final int brownies=0x7f08001f;
-        public static final int cafes=0x7f08002f;
+        public static final int brownies=0x7f080021;
+        public static final int cafes=0x7f080031;
         public static final int cancelar=0x7f08000f;
         public static final int cantidad=0x7f08000c;
-        public static final int cervezas=0x7f08003b;
+        public static final int cervezas=0x7f08003d;
         public static final int checkCaliente=0x7f080011;
         public static final int checkDescafeinado=0x7f08001c;
         public static final int checkDulce=0x7f080008;
@@ -77,46 +83,49 @@ public final class R {
         public static final int checkSalado=0x7f08000b;
         public static final int checkTiempo=0x7f080013;
         public static final int checkTocado=0x7f080014;
-        public static final int combinados=0x7f080033;
-        public static final int copa=0x7f080028;
-        public static final int creppes=0x7f08001e;
-        public static final int cucurucho=0x7f080027;
+        public static final int combinados=0x7f080035;
+        public static final int copa=0x7f08002a;
+        public static final int creppes=0x7f080020;
+        public static final int cucurucho=0x7f080029;
         public static final int dulce=0x7f080004;
-        public static final int enviar_al_camarero=0x7f080039;
-        public static final int especialidades=0x7f080034;
-        public static final int gofres=0x7f08001d;
-        public static final int grupo=0x7f080025;
-        public static final int helados=0x7f080031;
+        public static final int editTextContraseña=0x7f08001e;
+        public static final int editTextMas=0x7f080015;
+        public static final int enviar_al_camarero=0x7f08003b;
+        public static final int especialidades=0x7f080036;
+        public static final int gofres=0x7f08001f;
+        public static final int grupo=0x7f080027;
+        public static final int helados=0x7f080033;
         public static final int radioGroup1=0x7f080003;
-        public static final int refrescos=0x7f080030;
+        public static final int refrescos=0x7f080032;
         public static final int salado=0x7f080005;
-        public static final int spinnerBebidas=0x7f08003c;
-        public static final int spinnerBrownies=0x7f080022;
+        public static final int spinnerBebidas=0x7f08003e;
+        public static final int spinnerBrownies=0x7f080024;
         public static final int spinnerCafes=0x7f080010;
         public static final int spinnerCaliente=0x7f08001b;
-        public static final int spinnerCervezas=0x7f08003e;
-        public static final int spinnerCreppes=0x7f080021;
+        public static final int spinnerCervezas=0x7f080040;
+        public static final int spinnerCreppes=0x7f080023;
         public static final int spinnerDulce=0x7f080007;
         public static final int spinnerFrio=0x7f08001a;
-        public static final int spinnerGofres=0x7f080020;
-        public static final int spinnerHelado=0x7f080023;
-        public static final int spinnerRefrescos=0x7f08003d;
-        public static final int spinnerSabor1=0x7f080029;
-        public static final int spinnerSabor2=0x7f08002a;
-        public static final int spinnerSabor3=0x7f08002b;
+        public static final int spinnerGofres=0x7f080022;
+        public static final int spinnerHelado=0x7f080025;
+        public static final int spinnerMesa=0x7f08001d;
+        public static final int spinnerRefrescos=0x7f08003f;
+        public static final int spinnerSabor1=0x7f08002b;
+        public static final int spinnerSabor2=0x7f08002c;
+        public static final int spinnerSabor3=0x7f08002d;
         public static final int spinnerSalado=0x7f08000a;
-        public static final int spinnerTamaño=0x7f08002c;
+        public static final int spinnerTamaño=0x7f08002e;
         public static final int spinnerTocado=0x7f080016;
-        public static final int tarrina=0x7f080026;
+        public static final int tarrina=0x7f080028;
         public static final int textView1=0x7f08000d;
         public static final int textView2=0x7f080006;
         public static final int textView3=0x7f080009;
         public static final int textView4=0x7f080017;
-        public static final int textView5=0x7f080024;
-        public static final int textView6=0x7f08002d;
-        public static final int titulo=0x7f080035;
+        public static final int textView5=0x7f080026;
+        public static final int textView6=0x7f08002f;
+        public static final int titulo=0x7f080037;
         public static final int volverAcerca=0x7f080001;
-        public static final int volverInstrucciones=0x7f08002e;
+        public static final int volverInstrucciones=0x7f080030;
     }
     public static final class layout {
         public static final int acerca_de=0x7f030000;
@@ -124,11 +133,12 @@ public final class R {
         public static final int bolleria=0x7f030002;
         public static final int cafes=0x7f030003;
         public static final int combinados_cafe=0x7f030004;
-        public static final int especialidades=0x7f030005;
-        public static final int helados=0x7f030006;
-        public static final int instrucciones_de_uso=0x7f030007;
-        public static final int menu_principal=0x7f030008;
-        public static final int refrescos=0x7f030009;
+        public static final int enviar=0x7f030005;
+        public static final int especialidades=0x7f030006;
+        public static final int helados=0x7f030007;
+        public static final int instrucciones_de_uso=0x7f030008;
+        public static final int menu_principal=0x7f030009;
+        public static final int refrescos=0x7f03000a;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;

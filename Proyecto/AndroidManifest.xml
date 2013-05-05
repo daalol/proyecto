@@ -2,6 +2,8 @@
     package="com.example.proyecto"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <uses-sdk
         android:minSdkVersion="7"
@@ -31,6 +33,7 @@
         <activity android:name=".Helados"  android:screenOrientation="portrait"></activity>
          <activity android:name=".Bolleria"  android:screenOrientation="portrait"></activity>
          <activity android:name=".Especialidades"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".Enviar"  android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
