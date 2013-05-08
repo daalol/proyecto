@@ -39,5 +39,21 @@
 
         <requestFocus />
     </EditText>
+    
+     <Button
+         android:id="@+id/enviar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/editTextContraseña"
+         android:text="Enviar" />
+
+    <Button
+        android:id="@+id/volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextContraseña"
+        android:layout_toRightOf="@+id/enviar"
+        android:text="Volver" />
 
 </RelativeLayout>
