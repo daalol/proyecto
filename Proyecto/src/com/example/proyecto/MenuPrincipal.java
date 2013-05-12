@@ -96,6 +96,7 @@ public class MenuPrincipal extends Activity{
         	public void onClick(View v){
         		
         		Intent deMenuPrincipalAEnviar = new Intent(MenuPrincipal.this,Enviar.class);
+        		/*deMenuPrincipalAEnviar.putExtra("pedido", lstOpciones.toString());*/
            		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAEnviar,0);
            		
         	}

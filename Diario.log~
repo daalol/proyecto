@@ -26,3 +26,5 @@ Viernes 3 Mayo --> Termino "Combinados de cafe" y comienzo "Especialidades". Apa
 Viernes 3 Mayo --> Termino "Especialidades" , solo me falta la categoria "Cafes" para terminar las categorias. Tiempo: 30 min.
 Sabado 4 Mayo --> Modifico totalmente lo que tenia hecho en cafes y lo adapto como el resto de categorias, terminado el .xml, falta el .class . Tiempo 30min.
 Domingo 5 Mayo --> Termino la categoria de cafes, y comienzo una nueva activity "Enviar" para enviar los datos a otro dispositivo
+Miercoles 8 Mayo --> Continuo creando la activity "Enviar" para que envie los datos a un servidor usando Json y este los recoja por php. Investigo un poco como va todo el envio de datos. Tiempo: 1 hora 45 min.
+Jueves 9 Mayo --> Busco informacion de Json y Php para el envio de datos. Tiempo: 45 min

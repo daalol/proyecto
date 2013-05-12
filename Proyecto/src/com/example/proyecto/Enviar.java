@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class Enviar extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enviar);
+             
         
      // ***** SPINNER ******
         //Inicializo el spinner
@@ -59,22 +61,27 @@ public class Enviar extends Activity{
     	     public void onClick(View v) {
     	     
     	    	 ArrayList parametros = new ArrayList();
+    	    	 final EditText editTextContraseña = (EditText) findViewById(R.id.editTextContraseña);
+    	    	/* Bundle recibePedido = getIntent().getExtras();
+    	    	 String pedido=recibePedido.getString("pedido");*/
+    	    	 
     	    	 parametros.add("Pedido");
-    	    	 parametros.add("Unpedidocualquiera");
+    	    	 parametros.add("estoEsUnaPrueba");
     	    	 parametros.add("Contrasena");
-    	    	 parametros.add("Albert");
+    	    	 parametros.add(editTextContraseña.getText().toString());
     	    	 // Llamada a Servidor Web PHP
     	    	 try {
     	    	    Post post = new Post();
-    	    	    JSONArray datos = post.getServerData(parametros, "http://192.168.0.160/recoge.php");
+    	    	    JSONArray datos = post.getServerData(parametros, "http://192.168.0.160/pro_android/recoge_datos.php");
     	    	    if (datos != null && datos.length() > 0) {
-                        JSONObject json_data = datos.getJSONObject(0);
-                        int numMesa = json_data.getInt("ID_MESA");
+                        JSONObject json_data = datos.getJSONObject(1); 
+                        int numMesa = json_data.getInt("id_mesa");
                         	if (numMesa > 0) {
-                        		Toast.makeText(getBaseContext(),"Acierto. ", Toast.LENGTH_SHORT).show();
+                        		Toast.makeText(getBaseContext(),"El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
+                        		Enviar.this.finish();
                         	}
     	    	    } else {
-                        Toast.makeText(getBaseContext(),"Error. ", Toast.LENGTH_SHORT)
+                        Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT)
                                                                                               .show();
                         	}
     	    	 } catch (Exception e) {
@@ -132,6 +139,7 @@ public class Enviar extends Activity{
         	     }
         	 }//Fin getRespuestaPost
 
+         
         	 @SuppressWarnings("finally")
         	 private JSONArray getJsonArray() {
         	     JSONArray jArray = null;
