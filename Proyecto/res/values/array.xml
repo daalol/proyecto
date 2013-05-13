@@ -117,16 +117,7 @@
         <item>Vodka</item>
     </string-array>
     
-    <!-- Para Enviar -->
-    
-        <string-array name="mesas">
-        <item>Mesa 1</item>
-        <item>Mesa 2</item>
-        <item>Mesa 3</item>
-        <item>Mesa 4</item>
-    </string-array>
-    
-    <!-- Generales para todo el proyecto -->
+    <!-- Generales para todo el proyecto (Se usaran en varias activity)-->
     
      <string-array name="sabores">
         <item>Chocolate</item>

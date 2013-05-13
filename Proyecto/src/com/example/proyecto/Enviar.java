@@ -34,17 +34,6 @@ public class Enviar extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enviar);
-             
-        
-     // ***** SPINNER ******
-        //Inicializo el spinner
-        final Spinner spinnerMesa = (Spinner) findViewById(R.id.spinnerMesa);
-      //Configuro su adaptador
-      	ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(this, R.array.mesas, android.R.layout.simple_spinner_item);
-      	adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-      //Coloco el adaptador en su elemento correspondiente
-      		spinnerMesa.setAdapter(adaptador);	
-      //Spinner inicializado
         
       		
       //**** BOTONES VOLVER Y ENVIAR ****
@@ -74,10 +63,16 @@ public class Enviar extends Activity{
     	    	    Post post = new Post();
     	    	    JSONArray datos = post.getServerData(parametros, "http://192.168.0.160/pro_android/recoge_datos.php");
     	    	    if (datos != null && datos.length() > 0) {
-                        JSONObject json_data = datos.getJSONObject(1); 
+    	    	    	/*JSONObject json_data=datos.getJSONObject(0);
+    	    	    	String validar=json_data.getString("ok");
+    	    	    	if (validar.equalsIgnoreCase("ok")) {
+                    		Toast.makeText(getBaseContext(),"El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
+                    		Enviar.this.finish();
+                    	}*/
+                        JSONObject json_data = datos.getJSONObject(0); 
                         int numMesa = json_data.getInt("id_mesa");
                         	if (numMesa > 0) {
-                        		Toast.makeText(getBaseContext(),"El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
+                        		Toast.makeText(getBaseContext(),"Acierto, El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
                         		Enviar.this.finish();
                         	}
     	    	    } else {
