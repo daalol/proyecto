@@ -29,3 +29,4 @@ Domingo 5 Mayo --> Termino la categoria de cafes, y comienzo una nueva activity 
 Miercoles 8 Mayo --> Continuo creando la activity "Enviar" para que envie los datos a un servidor usando Json y este los recoja por php. Investigo un poco como va todo el envio de datos. Tiempo: 1 hora 45 min.
 Jueves 9 Mayo --> Busco informacion de Json y Php para el envio de datos. Tiempo: 45 min
 Sabado 11, Domingo 12 --> Creo el .php que leera y almacenara los datos y el .html para visualizarlos(aun sin terminar). Realizo varias pruebas de envio de datos, falla la devolucion del objeto JSon ya que no puedo extraer un dato de este objeto. Tiempo: 2 horas.
+Lunes 13 Mayo --> Resulevo el error que me impedia enviar correctamente los datos en recoge_pedido.php . Modifico varios elementos de la actividad que se encargara de enviar los datos, ya que por ejemplo, el spinner no era necesario. Tiempo: 40 min

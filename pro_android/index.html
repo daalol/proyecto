@@ -1,21 +1,44 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Cafeteria & heladeria, Panel de control</title>
+<link href="estilo.css" rel="StyleSheet" type="text/css">
 </head>
-<body>
-<div style="background-color:#790342;">
-<?php
-	$link = mysql_connect('localhost', 'root', '');
-		if (!$link) {
-			die('No se pudo conectar: ' . mysql_error());
-		}
-
-mysql_select_db("cafeteria");
-
-$q = mysql_query("SELECT * FROM pedidos WHERE estado='nuevo' ");
-
-?>
-</div>
-</body>
+    <body  background="fondo8.png">
+	        <?php
+               $link = mysql_connect('localhost', 'root', '');
+                    if (!$link) {
+                        die('No se pudo conectar: ' . mysql_error());
+                    }
+            
+            mysql_select_db("cafeteria");
+            
+            $q = mysql_query("SELECT * FROM pedidos WHERE estado='nuevo' ");
+            
+            ?>
+            
+    <center><h1>Cafeteria & heladeria</h1></center>
+    <div style=" padding: 15px 50px 50px 50px;">
+        <div style=" height:80%; width:100%; background-color:#fff444;">
+            <center><h3>Pedidos pendientes:</h3></center>
+				<div style="float:left; height:80%; width:80%; background-color:#444fff;">
+					<table>	
+						<td>
+							<tr>***Aqui va el pedido</tr>
+						<td>
+					</table>
+				</div>
+				<div style="float:right; height:80%; width:20%; background-color:#ffffff;">
+					<table>	
+						<td>
+							<tr>Aqui va el estado/botones de "pedido realizado" o algo similar</tr>
+						<td>
+					</table>
+				</div>
+           
+        </div>
+    </div>
+    </body>
 </html>
 
