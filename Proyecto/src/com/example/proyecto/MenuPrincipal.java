@@ -96,7 +96,8 @@ public class MenuPrincipal extends Activity{
         	public void onClick(View v){
         		
         		Intent deMenuPrincipalAEnviar = new Intent(MenuPrincipal.this,Enviar.class);
-        		/*deMenuPrincipalAEnviar.putExtra("pedido", lstOpciones.toString());*/
+        		//añadimos el String que contendra todo el pedido llamando al metodo formateaPedido
+        		deMenuPrincipalAEnviar.putExtra("pedido", formateaPedido(datos));
            		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAEnviar,0);
            		
         	}
@@ -156,6 +157,18 @@ public class MenuPrincipal extends Activity{
 	  			}
 	      	}
 	      }
+	 
+	 //Este metodo se encarga de formatear los datos del arrayList para que esten todos
+	 //en un solo String y con un separador
+	 public String formateaPedido(ArrayList<String> datos){
+		 
+		 String resultado=datos.get(0);
+		 for(int i=1; i<datos.size();i++){
+			 resultado+=" *** "+datos.get(i);
+		 }
+		return resultado;
+		 
+	 }
 	 
 	 
 	 // ***** Menu *****

@@ -1,33 +1,36 @@
+<?php 
+	$link = mysql_connect('localhost', 'root', '');
+		if (!$link) {
+			die('No se pudo conectar: ' . mysql_error());
+		}          
+			mysql_select_db("cafeteria");
+							
+			$query = "SELECT pedido FROM pedidos WHERE estado LIKE '%nuevo'" ;
+			$result = mysql_query($query);
+			while($row = mysql_fetch_array($result)){
+				echo "aaa".$row["pedido"];
+			}
+			$a=9;
+?>
+
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Cafeteria & heladeria, Panel de control</title>
-<link href="estilo.css" rel="StyleSheet" type="text/css">
 </head>
     <body  background="fondo8.png">
-	        <?php
-               $link = mysql_connect('localhost', 'root', '');
-                    if (!$link) {
-                        die('No se pudo conectar: ' . mysql_error());
-                    }
-            
-            mysql_select_db("cafeteria");
-            
-            $q = mysql_query("SELECT * FROM pedidos WHERE estado='nuevo' ");
-            
-            ?>
-            
+	
     <center><h1>Cafeteria & heladeria</h1></center>
     <div style=" padding: 15px 50px 50px 50px;">
         <div style=" height:80%; width:100%; background-color:#fff444;">
             <center><h3>Pedidos pendientes:</h3></center>
 				<div style="float:left; height:80%; width:80%; background-color:#444fff;">
-					<table>	
-						<td>
-							<tr>***Aqui va el pedido</tr>
-						<td>
+					
+					<table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt">
+							<tr><?php echo "aa"; ?></tr><br>
 					</table>
+					
 				</div>
 				<div style="float:right; height:80%; width:20%; background-color:#ffffff;">
 					<table>	
@@ -40,5 +43,21 @@
         </div>
     </div>
     </body>
+	<?php  mysql_close($link); ?>
 </html>
+
+<!--<table>
+						<?php
+						$q = mysql_query("SELECT pedido FROM pedidos WHERE estado LIKE '%nuevo'");
+						echo $q[pedido]; 
+						while ($myrow=mysql_fetch_array($q))
+						{?>
+						<tr><td>
+						<?php echo $myrow[pedido]."apustrufant" ?> 
+						</td>
+						</tr>
+						<?php
+						}
+						?>
+					</table>-->
 

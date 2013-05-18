@@ -27,6 +27,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Enviar extends Activity{
@@ -51,11 +52,11 @@ public class Enviar extends Activity{
     	     
     	    	 ArrayList parametros = new ArrayList();
     	    	 final EditText editTextContraseña = (EditText) findViewById(R.id.editTextContraseña);
-    	    	/* Bundle recibePedido = getIntent().getExtras();
-    	    	 String pedido=recibePedido.getString("pedido");*/
+    	    	 Bundle recibePedido = getIntent().getExtras();
+    	    	 String pedido=recibePedido.getString("pedido");
     	    	 
     	    	 parametros.add("Pedido");
-    	    	 parametros.add("estoEsUnaPrueba");
+    	    	 parametros.add(pedido);
     	    	 parametros.add("Contrasena");
     	    	 parametros.add(editTextContraseña.getText().toString());
     	    	 // Llamada a Servidor Web PHP
