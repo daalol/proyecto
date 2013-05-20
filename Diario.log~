@@ -31,3 +31,4 @@ Jueves 9 Mayo --> Busco informacion de Json y Php para el envio de datos. Tiempo
 Sabado 11, Domingo 12 --> Creo el .php que leera y almacenara los datos y el .html para visualizarlos(aun sin terminar). Realizo varias pruebas de envio de datos, falla la devolucion del objeto JSon ya que no puedo extraer un dato de este objeto. Tiempo: 2 horas.
 Lunes 13 Mayo --> Resulevo el error que me impedia enviar correctamente los datos en recoge_pedido.php . Modifico varios elementos de la actividad que se encargara de enviar los datos, ya que por ejemplo, el spinner no era necesario. Tiempo: 40 min
 Martes 14 Mayo --> Diseñando index.html. Tiempo 20 min
+Sabado 18 Mayo --> Continuo con index.html, la aplicacion ya envia el pedido a la base de datos, gracias a un metodo que formatea el Arraylist para enviarlo posteriormente al servidor. Tiempo 1hora 30 min.
