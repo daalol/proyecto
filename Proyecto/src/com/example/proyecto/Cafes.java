@@ -51,7 +51,8 @@ public class Cafes extends Activity {
 							int arg2, long arg3) {
 						// TODO Auto-generated method stub
 						if(spinnerCafes.getSelectedItem().toString().contains("Carajillo")){
-							
+								
+								checkTocado.setChecked(false);
 								spinnerTocado.setVisibility(v.VISIBLE);
 				           		textView3.setVisibility(v.VISIBLE);
 				           		
@@ -63,6 +64,7 @@ public class Cafes extends Activity {
 				           		textView3.setVisibility(v.INVISIBLE);
 				           		
 				           		checkTocado.setVisibility(v.VISIBLE);
+				           		checkTocado.setChecked(false);
 						}
 					}
 

@@ -61,12 +61,20 @@ public class Especialidades extends Activity{
 				//elementos visibles
            		spinnerGofres.setVisibility(v.VISIBLE);
            		textView1.setVisibility(v.VISIBLE);
+	           		if(spinnerGofres.getSelectedItem().toString().contains("Helado")){
+	       				spinnerHelados.setVisibility(v.VISIBLE);
+							textView4.setVisibility(v.VISIBLE);
+	       			}
            		
            		//elementos invisibles
            		textView2.setVisibility(v.INVISIBLE);
            		textView3.setVisibility(v.INVISIBLE);
            		spinnerCreppes.setVisibility(v.INVISIBLE);
            		spinnerBrownies.setVisibility(v.INVISIBLE);
+	           		if(!spinnerGofres.getSelectedItem().toString().contains("Helado")){
+	           			spinnerHelados.setVisibility(v.INVISIBLE);
+	           			textView4.setVisibility(v.INVISIBLE);
+	           		}
         	}
 		});
 		RBCreppes.setOnClickListener(new OnClickListener(){
@@ -74,12 +82,20 @@ public class Especialidades extends Activity{
 				//elementos visibles
            		spinnerCreppes.setVisibility(v.VISIBLE);
            		textView2.setVisibility(v.VISIBLE);
+           			if(spinnerCreppes.getSelectedItem().toString().contains("Helado")){
+           				spinnerHelados.setVisibility(v.VISIBLE);
+   						textView4.setVisibility(v.VISIBLE);
+           			}
            		
            		//elementos invisibles
            		spinnerGofres.setVisibility(v.INVISIBLE);
            		spinnerBrownies.setVisibility(v.INVISIBLE);
            		textView1.setVisibility(v.INVISIBLE);
            		textView3.setVisibility(v.INVISIBLE);
+           			if(!spinnerCreppes.getSelectedItem().toString().contains("Helado")){
+           					spinnerHelados.setVisibility(v.INVISIBLE);
+           					textView4.setVisibility(v.INVISIBLE);
+           			}
         	}
 		});
 		RBBrownies.setOnClickListener(new OnClickListener(){
@@ -87,13 +103,20 @@ public class Especialidades extends Activity{
 				//elementos visibles
 				spinnerBrownies.setVisibility(v.VISIBLE);
 				textView3.setVisibility(v.VISIBLE);
+					if(spinnerBrownies.getSelectedItem().toString().contains("Helado")){
+	       				spinnerHelados.setVisibility(v.VISIBLE);
+							textView4.setVisibility(v.VISIBLE);
+	       			}
 				
            		//elementos invisibles
 				spinnerGofres.setVisibility(v.INVISIBLE);
            		spinnerCreppes.setVisibility(v.INVISIBLE);
            		textView1.setVisibility(v.INVISIBLE);
            		textView2.setVisibility(v.INVISIBLE);
-          		
+           			if(!spinnerBrownies.getSelectedItem().toString().contains("Helado")){
+           					spinnerHelados.setVisibility(v.INVISIBLE);
+           					textView4.setVisibility(v.INVISIBLE);
+           			}
         	}
 		});//Fin radioButtons
 		

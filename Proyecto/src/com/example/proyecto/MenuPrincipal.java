@@ -162,9 +162,9 @@ public class MenuPrincipal extends Activity{
 	 //en un solo String y con un separador
 	 public String formateaPedido(ArrayList<String> datos){
 		 
-		 String resultado=datos.get(0);
+		 String resultado="*** "+datos.get(0);
 		 for(int i=1; i<datos.size();i++){
-			 resultado+=" *** "+datos.get(i);
+			 resultado+=" ||| "+datos.get(i);
 		 }
 		return resultado;
 		 

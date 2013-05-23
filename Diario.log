@@ -34,3 +34,4 @@ Martes 14 Mayo --> Diseñando index.html. Tiempo 20 min
 Sabado 18 Mayo --> Continuo con index.html, la aplicacion ya envia el pedido a la base de datos, gracias a un metodo que formatea el Arraylist para enviarlo posteriormente al servidor. Tiempo 1hora 30 min.
 Lunes 20 Mayo --> Realizo pruebas con index.php. Tiempo 30 min.
 Miercoles 22 --> Continuo puliendo index.php , ya consigo modificar el estado de la mesa (Nuevo/servido). Tiempo: 1hora 15min.
+Jueves 23 Mayo --> Arreglada la logica de spinners visibles/invisibles que no funcionaba como tocaba. Modificado el logo principal. Cambio de nombre de la aplicación. Tiempo: 1hora 15 min.
