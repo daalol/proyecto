@@ -19,63 +19,52 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Cafeteria & heladeria, Panel de control</title></head>
 
+<!-- estilo de la pagina-->
 <style type="text/css">
-<!--
 #td1{	
-	width:700px;
+	width:70%;
 }
 #td2 {
-	width:75px;
+	width:15%;
 }
-
--->
-        </style>
+</style>
 		
 <body background="fondo8.png">
 
 <center><h1>Cafeteria & heladeria</h1></center>
-    <div style=" padding: 15px 50px 50px 50px;">
-        <div style=" height:100%; width:100%; background-color:#fff444;">
+    <div style=" padding: 0px 50px 50px 50px;">
             <center><h3>Pedidos:</h3></center>
-				<div style=" padding: 0px 50px 50px 50px;">
-					<div style=" height:90%; width:100%; background-color:#444fff;">
-						<table border="1" style="font-size: 14pt">
-							<tr>
-								<td><b>Pedidos pendientes:</b></td><td><b>Mesa:</b></td><td><b>Estado:</b></td>
-							</tr>
-								<?php
-									while($row = mysql_fetch_array($mesasNuevas)){
-										echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado'].
-										"</td><td id='td2'><a href='sirve_pedidos.php?pedido=".urlencode($row['pedido'])."&id_mesa=".$row['id_mesa']."'>Terminado!!!</a></td></tr><br></br>";
-									}
-								?>
-						</table>
-						<br></br>
-						<table border="1" style="font-size: 14pt">
+					<div style=" height:80%; width:100%; background-color:#a6c53b;">
+						<div style="overflow-y: scroll; height:50%;">
+							<table border="1" style="font-size: 14pt;">
+							<br></br>
+								<tr>
+									<td><b>Pedidos pendientes:</b></td><td><b>Mesa:</b></td><td><b>Estado:</b></td>
+								</tr>
+									<?php
+										while($row = mysql_fetch_array($mesasNuevas)){
+											echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado'].
+											"</td><td id='td2'><a href='sirve_pedidos.php?id_pedido=".$row['id_pedido']."'>Terminado!!!</a></td></tr>";
+										}
+									?>
+							</table>
+						</div>
+						<div style="overflow-y: scroll; height:50%;">
+						<table border="1" style="font-size: 14pt;">
 							<tr>
 								<td><b>Pedidos terminados:</b></td><td><b>Mesa:</b></td><td><b>Estado:</b></td>
 							</tr>
 								<?php
 									while($row = mysql_fetch_array($mesasServidas)){
-										echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado']."</td></tr><br></br>";
+										echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado'].
+										"</td><td id='td2'><a href='borra_pedidos.php?id_pedido=".$row['id_pedido']."'>Borrar!!!</a></td></tr>";
 									}
 								?>
 						</table>
-					</div>
-				</div>
-				<!--<div style="float:right; height:80%; width:19%; background-color:#ffffff;">
-					<table>	
-						<td>
-							<tr>Aqui va el estado/botones de "pedido realizado" o algo similar</tr>
-						<td>
-					</table>
-				</div>-->
-           
-        </div>
+						</div>
+					</div>     
     </div>
-<table>
-
-</table>
 </body>
+<!-- Cierro la conexion -->
 <?php   mysql_close($link); ?>
 </html>

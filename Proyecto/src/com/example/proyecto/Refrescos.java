@@ -182,8 +182,9 @@ public class Refrescos extends Activity{
 			        	Refrescos.this.finish(); //cierro la aplicacion
 			        	break;
 			        case R.id.MnuOpc2:
-			        	Intent intent2 = new Intent(Refrescos.this, InstruccionesDeUsoRefrescos.class );
-			            startActivity(intent2);
+			        	Intent deRefrescosAIntruccionesDeUso = new Intent(Refrescos.this, InstruccionesDeUso.class );
+			        	deRefrescosAIntruccionesDeUso.putExtra("valor", 2);
+			        	startActivity(deRefrescosAIntruccionesDeUso);
 			        	break;
 			        case R.id.MnuOpc3:
 			        	Intent intent3 = new Intent(Refrescos.this, AcercaDe.class );

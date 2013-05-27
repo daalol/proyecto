@@ -1,8 +1,62 @@
 <resources>
 
     <string name="app_name">Proyecto</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-
+    
+    <string name="instrucciones_uso">Bienvenido a Cafeteria - Heladeria, 
+         estas en el menu principal de la aplicación, desde aqui gestionaras tu
+         pedido añadiendo productos a la lista de la derecha. Pulsa en las categorias
+         de la parte izquierda para poder elegir el producto que más te apetezca.
+         Puedes borrar productos de tu lista con los dos botones que hay debajo de ella.
+         Una vez tengas tu pedido, pulsa el boton "Enviar al camarero". Si tienes alguna
+         duda consulta con los camareros, ¡estaran encantados de atenderte!</string>
+    
+    <string name="instrucciones_uso_cafes">Estas en la sección "Cafes",
+         elige tu cafe preferido en el menu que veras en la parte
+         superior de la pantalla, y despues personalizalo a tu gusto
+         pulsando sobre las múltiples opciones que te ofrecemos, y
+         si no la encuentras puedes indicarnos como quieres tu cafe 
+         en la sección "Alguna cosa más". Una vez lo tengas pulsa el 
+         boton "añadir" para que tu cafe sea introducido en tu pedido.
+         Si quieres salir de aqui sin pedir nada pulsa en "Cancelar".</string>
+     
+    <string name="instrucciones_uso_refrescos"> Estas en la sección 
+        "Refrescos", en la parte superior de la pantalla elige tu tipo 
+        de refrescos favorito, una vez lo tengas podras ver el menu  
+        para poder elegir el refresco. Una vez lo tengas pulsa el boton 
+        "añadir" para que tu refresco sea introducido en tu pedido. Si 
+        quieres salir de aqui sin pedir nada pulsa en "Cancelar".</string>
+        
+     <string name="instrucciones_uso_helados">Estas en la sección "Helados",
+        elige el tipo de  helado en la parte superior de la pantalla, y
+        despues elige los sabores que más te gusten en el menu que te
+        aparecera en pantalla (Tarrinas y cucuruchos pueden llevar hasta
+        2 sabores, las copas de helado pueden llevar hasta 3 sabores). Una
+        vez lo tengas pulsa el boton "añadir" para que tu helado sea 
+        introducido en tu pedido. Si quieres salir de aqui sin pedir nada 
+        pulsa en "Cancelar".</string>
+        
+     <string name="instrucciones_uso_bolleria">Estas en la sección "Bolleria", 
+        elige el tipo de  bolleria en la parte superior de la pantalla, y 
+        despues elige lo que más te guste en el menu que te aparecera en 
+        pantalla. Una vez lo tengas pulsa el boton "añadir" para que el 
+        producto sea introducido en tu pedido. Si quieres salir de aqui sin 
+        pedir nada pulsa en "Cancelar".</string>
+        
+      <string name="instrucciones_uso_combinados">Estas en la sección "Combinados
+        de Cafe", elige el tipo de  combinado de cafe en la parte superior de la 
+        pantalla, y despues elige el que más te guste en el menu que te
+        aparecera en pantalla (Los combinados frios estan hechos con cafe 
+        granizado, solo pueden ser con cafeina). Una vez lo tengas pulsa el 
+        boton "añadir" para que tu cafe sea introducido en tu pedido. Si quieres
+        salir de aqui sin pedir nada pulsa en "Cancelar".</string>
+        
+       <string name="instrucciones_uso_especialidades">Estas en la sección 
+        "Especialidades", elige el tipo de especialidad en la parte superior de la 
+        pantalla, y despues elige lo que más te guste en el menu que te aparecera en 
+        pantalla. Una vez lo tengas pulsa el boton "añadir" para que el producto sea 
+        introducido en tu pedido. Si quieres salir de aqui sin pedir nada pulsa en 
+        "Cancelar".</string>
+   
 </resources>

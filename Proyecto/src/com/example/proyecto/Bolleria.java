@@ -156,8 +156,9 @@ public boolean onCreateOptionsMenu(Menu menu) {
 				Bolleria.this.finish(); //cierro la aplicacion
 				break;
 			case R.id.MnuOpc2:
-				Intent intent2 = new Intent(Bolleria.this, InstruccionesDeUsoBolleria.class );
-				startActivity(intent2);
+				Intent deBolleriaAInstruccionesDeUso= new Intent(Bolleria.this, InstruccionesDeUso.class );
+				deBolleriaAInstruccionesDeUso.putExtra("valor", 4);
+				startActivity(deBolleriaAInstruccionesDeUso);
 				break;
 			 case R.id.MnuOpc3:
 				Intent intent3 = new Intent(Bolleria.this, AcercaDe.class );

@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Bienvenido a Cafeteria &amp; Heladeria, estas en el menu principal de la aplicación, desde aqui gestionaras tu pedido añadiendo productos a la lista de la derecha. Pulsa en las categorias de la parte izquierda para poder elegir el producto que más te apetezca. Puedes borrar productos de tu lista con los dos botones que hay debajo de ella. Una vez tengas tu pedido, pulsa el boton &quot;Enviar al camarero&quot;. Si tienes alguna duda consulta con los camareros, ¡estaran encantados de atenderte!"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

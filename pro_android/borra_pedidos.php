@@ -9,7 +9,7 @@ mysql_select_db("cafeteria");
 $a=$_GET["id_pedido"];
 
 //Realizo el update
-$q ="UPDATE pedidos SET estado='servido' WHERE id_pedido='".$a."';";
+$q ="DELETE FROM pedidos WHERE id_pedido='".$a."';";
 mysql_query($q);
 
 //cierro la base de datos

@@ -154,8 +154,9 @@ public class Helados extends Activity{
 		        	Helados.this.finish(); //cierro la aplicacion
 		        	break;
 		        case R.id.MnuOpc2:
-		        	Intent deHeladosAInstruccionesDeUso = new Intent(Helados.this, InstruccionesDeUsoHelados.class );
-		            startActivity(deHeladosAInstruccionesDeUso);
+		        	Intent deHeladosAInstruccionesDeUso = new Intent(Helados.this, InstruccionesDeUso.class );
+		        	deHeladosAInstruccionesDeUso.putExtra("valor", 3);
+		        	startActivity(deHeladosAInstruccionesDeUso);
 		        	break;
 		        case R.id.MnuOpc3:
 		        	Intent deHeladosAAcercaDe= new Intent(Helados.this, AcercaDe.class );

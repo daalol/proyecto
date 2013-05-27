@@ -200,8 +200,9 @@ public class Cafes extends Activity {
 	        	Cafes.this.finish(); //cierro la aplicacion
 	        	break;
 	        case R.id.MnuOpc2:
-	        	Intent intent2 = new Intent(Cafes.this, InstruccionesDeUsoCafes.class );
-	            startActivity(intent2);
+	        	Intent deCafesAInstruccionesDeUso = new Intent(Cafes.this, InstruccionesDeUso.class );
+	        	deCafesAInstruccionesDeUso.putExtra("valor", 1);
+	            startActivity(deCafesAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
 	        	Intent intent3 = new Intent(Cafes.this, AcercaDe.class );

@@ -291,8 +291,9 @@ public class Especialidades extends Activity{
 				        	Especialidades.this.finish(); //cierro la aplicacion
 				        	break;
 				        case R.id.MnuOpc2:
-				        	Intent intent2 = new Intent(Especialidades.this, InstruccionesDeUsoEspecialidades.class );
-				            startActivity(intent2);
+				        	Intent deEspecialidadesAInstruccionesDeUso = new Intent(Especialidades.this, InstruccionesDeUso.class );
+				        	deEspecialidadesAInstruccionesDeUso.putExtra("valor", 6);
+				        	startActivity(deEspecialidadesAInstruccionesDeUso);
 				        	break;
 				        case R.id.MnuOpc3:
 				        	Intent intent3 = new Intent(Especialidades.this, AcercaDe.class );

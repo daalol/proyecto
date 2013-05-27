@@ -196,8 +196,9 @@ public class MenuPrincipal extends Activity{
 	        	System.exit(0); //cierro la aplicacion
 	        	break;
 	        case R.id.MnuOpc2:
-	        	Intent intent2 = new Intent(MenuPrincipal.this, InstruccionesDeUso.class );
-	            startActivity(intent2);
+	        	Intent deMenuPrincipalAInstruccionesDeUso = new Intent(MenuPrincipal.this, InstruccionesDeUso.class );
+	        	deMenuPrincipalAInstruccionesDeUso.putExtra("valor", 0);
+	            startActivity(deMenuPrincipalAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
 	        	Intent intent3 = new Intent(MenuPrincipal.this, AcercaDe.class );

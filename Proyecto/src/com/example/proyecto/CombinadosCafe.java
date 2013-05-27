@@ -150,8 +150,9 @@ public class CombinadosCafe extends Activity{
 				    CombinadosCafe.this.finish(); //cierro la aplicacion
 				    break;
 				case R.id.MnuOpc2:
-				    Intent intent2 = new Intent(CombinadosCafe.this, InstruccionesDeUsoCombinados.class );
-				    startActivity(intent2);
+				    Intent deCombinadosAInstruccionesDeUso = new Intent(CombinadosCafe.this, InstruccionesDeUso.class );
+				    deCombinadosAInstruccionesDeUso.putExtra("valor", 5);
+				    startActivity(deCombinadosAInstruccionesDeUso);
 				    break;
 				case R.id.MnuOpc3:
 				    Intent intent3 = new Intent(CombinadosCafe.this, AcercaDe.class );
