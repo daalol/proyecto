@@ -17,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Helados extends Activity{
+	
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
 
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,29 +103,6 @@ public class Helados extends Activity{
         	}
         });
 	}
-	 // ***** Menu *****
-	 @Override
-	    public boolean onCreateOptionsMenu(Menu menu) {
-	    	 MenuInflater inflater = getMenuInflater();
-	         inflater.inflate(R.menu.activity_main, menu);
-	         return true;
-	    }
-	    public boolean onOptionsItemSelected(MenuItem item) {
-	        switch (item.getItemId()) {
-	        case R.id.MnuOpc1: 
-	        	System.exit(0); //cierro la aplicacion
-	        	break;
-	        case R.id.MnuOpc2:
-	        	Intent deHeladosAInstruccionesDeUso = new Intent(Helados.this, InstruccionesDeUso.class );
-	            startActivity(deHeladosAInstruccionesDeUso);
-	        	break;
-	        case R.id.MnuOpc3:
-	        	Intent deHeladosAAcercaDe= new Intent(Helados.this, AcercaDe.class );
-	            startActivity(deHeladosAAcercaDe);
-	        	break;
-	        	}
-	        return true;
-	        }
 	
 	// ***** METODOS *****
 	    
@@ -160,4 +139,29 @@ public class Helados extends Activity{
 			
 		}
 	//Fin metodos
+		
+		 // ***** Menu *****
+		 @Override
+		    public boolean onCreateOptionsMenu(Menu menu) {
+		    	 MenuInflater inflater = getMenuInflater();
+		         inflater.inflate(R.menu.activity_main, menu);
+		         return true;
+		    }
+		    public boolean onOptionsItemSelected(MenuItem item) {
+		        switch (item.getItemId()) {
+		        case R.id.MnuOpc1: 
+		        	cerrar.cierreActivity.finish();
+		        	Helados.this.finish(); //cierro la aplicacion
+		        	break;
+		        case R.id.MnuOpc2:
+		        	Intent deHeladosAInstruccionesDeUso = new Intent(Helados.this, InstruccionesDeUsoHelados.class );
+		            startActivity(deHeladosAInstruccionesDeUso);
+		        	break;
+		        case R.id.MnuOpc3:
+		        	Intent deHeladosAAcercaDe= new Intent(Helados.this, AcercaDe.class );
+		            startActivity(deHeladosAAcercaDe);
+		        	break;
+		        	}
+		        return true;
+		        }
 }

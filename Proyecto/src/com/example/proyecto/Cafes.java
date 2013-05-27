@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 public class Cafes extends Activity {
 	
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cafes);
@@ -194,10 +196,11 @@ public class Cafes extends Activity {
 	    public boolean onOptionsItemSelected(MenuItem item) {
 	        switch (item.getItemId()) {
 	        case R.id.MnuOpc1: 
-	        	System.exit(0); //cierro la aplicacion
+	        	cerrar.cierreActivity.finish();
+	        	Cafes.this.finish(); //cierro la aplicacion
 	        	break;
 	        case R.id.MnuOpc2:
-	        	Intent intent2 = new Intent(Cafes.this, InstruccionesDeUso.class );
+	        	Intent intent2 = new Intent(Cafes.this, InstruccionesDeUsoCafes.class );
 	            startActivity(intent2);
 	        	break;
 	        case R.id.MnuOpc3:

@@ -26,6 +26,12 @@
         <!-- Añadiendo .javas a partir de aqui-->
         <activity android:name=".AcercaDe"  android:screenOrientation="portrait"></activity>
         <activity android:name=".InstruccionesDeUso"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoCafes"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoRefrescos"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoBolleria"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoCombinados"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoHelados"  android:screenOrientation="portrait"></activity>
+        <activity android:name=".InstruccionesDeUsoEspecialidades"  android:screenOrientation="portrait"></activity>
         <activity android:name=".MenuPrincipal"  android:screenOrientation="portrait"></activity>
         <activity android:name=".CombinadosCafe"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Cafes"  android:screenOrientation="portrait"></activity>

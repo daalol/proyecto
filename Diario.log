@@ -35,3 +35,4 @@ Sabado 18 Mayo --> Continuo con index.html, la aplicacion ya envia el pedido a l
 Lunes 20 Mayo --> Realizo pruebas con index.php. Tiempo 30 min.
 Miercoles 22 --> Continuo puliendo index.php , ya consigo modificar el estado de la mesa (Nuevo/servido). Tiempo: 1hora 15min.
 Jueves 23 Mayo --> Arreglada la logica de spinners visibles/invisibles que no funcionaba como tocaba. Modificado el logo principal. Cambio de nombre de la aplicación. Tiempo: 1hora 15 min.
+Lunes 27 Mayo --> Arreglo un fallo de la actividad "Menu Principal", añado el menu desplegable para todas las actividades, añado a las actividades que se lanzan desde MenuPrinciapal unas lineas de codigo para poder cerrar las actividades desde otra actividad diferente. Creo las instrucciones de uso para cada categoria de productos ofertados. Tiempo: 1hora 30 min.

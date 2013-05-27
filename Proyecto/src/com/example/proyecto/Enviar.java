@@ -19,8 +19,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -31,11 +35,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Enviar extends Activity{
+
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enviar);
-        
+       
       		
       //**** BOTONES VOLVER Y ENVIAR ****
        final Button volver = (Button)findViewById(R.id.volver);
@@ -77,8 +83,7 @@ public class Enviar extends Activity{
                         		Enviar.this.finish();
                         	}
     	    	    } else {
-                        Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT)
-                                                                                              .show();
+                        Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT).show();
                         	}
     	    	 } catch (Exception e) {
                         Toast.makeText(getBaseContext(),"Error al conectar con el servidor. ", Toast.LENGTH_SHORT).show();
@@ -159,5 +164,31 @@ public class Enviar extends Activity{
         	             }
         	   }//Fin getServerData
          }//Fin clase Post
+	
+	
+	 // ***** Menu *****
+	 @Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.activity_main, menu);
+	         return true;
+	    }
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case R.id.MnuOpc1: 
+	        	cerrar.cierreActivity.finish();
+	        	Enviar.this.finish(); //cierro la aplicacion
+	        	break;
+	        case R.id.MnuOpc2:
+	        	Intent intent2 = new Intent(Enviar.this, InstruccionesDeUso.class );
+	            startActivity(intent2);
+	        	break;
+	        case R.id.MnuOpc3:
+	        	Intent intent3 = new Intent(Enviar.this, AcercaDe.class );
+	            startActivity(intent3);
+	        	break;
+	        	}
+	        return true;
+	        }
 	}//Fin activity
 

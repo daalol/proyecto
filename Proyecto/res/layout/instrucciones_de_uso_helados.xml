@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#a6c53b" >
+
+    <Button
+        android:id="@+id/volverInstrucciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Volver" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Estas en la sección &quot;Helados&quot;, elige el tipo de  helado en la parte superior de la pantalla, y despues elige los sabores que más te gusten en el menu que te aparecera en pantalla (Tarrinas y cucuruchos pueden llevar hasta 2 sabores, las copas de helado pueden llevar hasta 3 sabores). Una vez lo tengas pulsa el boton &quot;añadir&quot; para que tu helado sea introducido en tu pedido. Si quieres salir de aqui sin pedir nada pulsa en &quot;Cancelar&quot;."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_helado" />
+
+</RelativeLayout>

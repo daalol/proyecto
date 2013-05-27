@@ -15,20 +15,23 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MenuPrincipal extends Activity{
 	
 	final ArrayList<String> datos = new ArrayList<String>();
 	ArrayAdapter<String> adaptador;
 	ListView lstOpciones;
-	String[] estoEsUnaPrueba;
+	public static Activity cierreActivity; //Para poder cerrar la activity desde otra activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_principal);
         
-        // *** LIST VIEW DONDE VEREMOS LOS PRODUCTOS ELEGIDOS ***
+      //Para poder cerrar la activity desde otra activity
+        cierreActivity=this;
         
+        // *** LIST VIEW DONDE VEREMOS LOS PRODUCTOS ELEGIDOS ***
         	adaptador =
         	    new ArrayAdapter<String>(this,
         	        android.R.layout.simple_list_item_1, datos);	 
@@ -95,14 +98,19 @@ public class MenuPrincipal extends Activity{
         enviar_al_camarero.setOnClickListener(new OnClickListener(){
         	public void onClick(View v){
         		
+        		//Si no se a añadido ningun producto muestro un toast informando, si no, voy a la actividad "enviar"
+        		if(datos.isEmpty())
+        			Toast.makeText(getBaseContext(),"No has añadido ningun producto!!!", Toast.LENGTH_SHORT).show();
+        		else{
         		Intent deMenuPrincipalAEnviar = new Intent(MenuPrincipal.this,Enviar.class);
         		//añadimos el String que contendra todo el pedido llamando al metodo formateaPedido
         		deMenuPrincipalAEnviar.putExtra("pedido", formateaPedido(datos));
            		MenuPrincipal.this.startActivityForResult(deMenuPrincipalAEnviar,0);
-           		
+        		}
         	}
         });
         // *** FIN ENVIO DE DATOS ***
+        
         
         // *** BOTONES DE BORRADO ***
         
@@ -168,6 +176,10 @@ public class MenuPrincipal extends Activity{
 		 }
 		return resultado;
 		 
+	 }
+	 
+	 public void cierre(){
+		 MenuPrincipal.this.finish();
 	 }
 	 
 	 
