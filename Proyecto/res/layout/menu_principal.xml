@@ -13,7 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/refrescos"
         android:drawableTop="@drawable/ic_cafe"
-        android:text="Cafes"
+        android:text="Cafés"
         android:textSize="8dp" />
     
     <Button
@@ -48,7 +48,7 @@
                 android:layout_below="@+id/helados"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/ic_bolleria"
-                android:text="Bolleria"
+                android:text="Bollería"
                 android:textSize="8dp" />
             
            <Button

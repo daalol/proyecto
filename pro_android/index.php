@@ -44,7 +44,7 @@
 									<?php
 										while($row = mysql_fetch_array($mesasNuevas)){
 											echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado'].
-											"</td><td id='td2'><a href='sirve_pedidos.php?id_pedido=".$row['id_pedido']."'>Terminado!!!</a></td></tr>";
+											"</td><td id='td2'><a href='sirve_pedidos.php?id_pedido=".$row['id_pedido']."&var1=terminado'>Terminado!!!</a></td></tr>";
 										}
 									?>
 							</table>
@@ -57,12 +57,14 @@
 								<?php
 									while($row = mysql_fetch_array($mesasServidas)){
 										echo "<tr><td id='td1'>".$row['pedido']."</td><td id='td2'>".$row['id_mesa']."</td><td id='td2'>".$row['estado'].
-										"</td><td id='td2'><a href='borra_pedidos.php?id_pedido=".$row['id_pedido']."'>Borrar!!!</a></td></tr>";
+										"</td><td id='td2'><a href='sirve_pedidos.php?id_pedido=".$row['id_pedido']."&var2=borrado'>Borrar!!!</a></td></tr>";
 									}
 								?>
 						</table>
+						<center><a href='sirve_pedidos.php?var3=historico'>Limpiar registro de mesas servidas</a></center>
 						</div>
-					</div>     
+						
+					</div>     					
     </div>
 </body>
 <!-- Cierro la conexion -->

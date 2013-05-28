@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Cafes:" />
+        android:text="Cafés:" />
 
     <Spinner
         android:id="@+id/spinnerCafes"
@@ -57,7 +57,7 @@
          android:layout_height="wrap_content"
          android:layout_alignParentLeft="true"
          android:layout_below="@+id/checkTiempo"
-         android:text="Alguna cosa más (Corto de cafe, manchado...):" />
+         android:text="Alguna cosa más (Corto de café, manchado...):" />
 
     <EditText
         android:id="@+id/editTextMas"

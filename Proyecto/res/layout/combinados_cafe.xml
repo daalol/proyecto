@@ -17,13 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Cafe frio" />
+            android:text="Café frio" />
 
         <RadioButton
             android:id="@+id/RBCaliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cafe caliente" />
+            android:text="Café caliente" />
     </RadioGroup>
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/radioGroup1"
-        android:text="Combinados cafe frio:" />
+        android:text="Combinados café frio:" />
 
     <Spinner
         android:id="@+id/spinnerFrio"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spinnerFrio"
-        android:text="Combinados cafe caliente:"
+        android:text="Combinados café caliente:"
         android:visibility="invisible" />
 
     <Spinner

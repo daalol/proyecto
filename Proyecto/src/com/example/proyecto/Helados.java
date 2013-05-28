@@ -8,6 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,7 +80,7 @@ public class Helados extends Activity{
            		textView5.setVisibility(v.VISIBLE);
            		textView4.setVisibility(v.INVISIBLE);
         	}
-		});
+		});	
 		
 		// ****** BOTONES ******
 		//Boton cancelar, sirve para cerrar esta actividad sin enviar nada
@@ -119,8 +121,14 @@ public class Helados extends Activity{
 						+". Cantidad: "+cantidad.getText().toString();
 			}
 			else{
-			return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()+" "
+				if(sabor1.getSelectedItem().toString().equals(sabor2.getSelectedItem().toString())){
+					return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()
+							+". Cantidad: "+cantidad.getText().toString();
+				}
+				else {
+					return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()+" "
 					+sabor2.getSelectedItem().toString()+". Cantidad: "+cantidad.getText().toString();
+				}
 			}
 		
 	}

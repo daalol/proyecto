@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -91,6 +94,27 @@ public class MenuPrincipal extends Activity{
             
         // *** FIN BOTONES DE PRODUCTOS ***
 
+        //*** Dialog para ver los productos del listView ***
+            lstOpciones.setOnItemClickListener(new OnItemClickListener(){
+            	public void onItemClick(AdapterView<?> parent, View view, int position, long id) { 
+            		
+            		AlertDialog.Builder seleccion = new AlertDialog.Builder(MenuPrincipal.this);
+            		
+	        		seleccion.setTitle("Descripción del pedido:");
+	        		final CharSequence[] chs =datos.toArray(new CharSequence[datos.size()]);
+	        		seleccion.setItems(chs, new DialogInterface.OnClickListener() {
+
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							// TODO Auto-generated method stub
+						}     
+        		    });
+	        		seleccion.create();
+	        		seleccion.show();
+	        			
+            	}
+            	
+            });
         
         // *** ENVIO DE DATOS A LA APLICACION SERVIDORA ***
         	

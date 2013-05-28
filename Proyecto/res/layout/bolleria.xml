@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/radioGroup1"
-        android:text="Bolleria dulce:" />
+        android:text="Bollería dulce:" />
 
     <Spinner
         android:id="@+id/spinnerDulce"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/checkDulce"
-        android:text="Bolleria salada:"
+        android:text="Bollería salada:"
         android:visibility="invisible" />
     
     <Spinner

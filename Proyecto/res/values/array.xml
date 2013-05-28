@@ -10,14 +10,16 @@
         <item>Fresa</item>
         <item>Strachatella</item>
         <item>Leche Merengada</item>
-        <item>Limon</item>
+        <item>Limón</item>
         <item>Mora</item>
-        <item>Platano</item>
+        <item>Plátano</item>
         <item>Nata</item>
         <item>Nutella</item>
         <item>Chocolate blanco</item>
         <item>Tutti fruti</item>
         <item>Caramelo</item>
+        <item>Tiramisu</item>
+        <item>Menta</item>
     </string-array>
     
     <!-- Para "Refrescos" -->
@@ -25,7 +27,7 @@
         <item>Horchata</item>
         <item>Horchata Mixta</item>
         <item>Horchata Granizada</item>
-        <item>Limon granizado</item>
+        <item>Limón granizado</item>
         <item>Bicicleta</item>
         <item>Vampiro</item>
     </string-array>
@@ -34,13 +36,13 @@
         <item>Cola 20cc</item>
         <item>Cola light 20cc</item>
         <item>Naranja 20cc</item>
-        <item>Limon 20cc</item>
+        <item>Limón 20cc</item>
         <item>Botella agua 33cc</item>
     </string-array>
     
     <string-array name="cervezas">
-        <item>&#8531; Cerveza</item>
-        <item>&#8531; Cerveza premium</item>
+        <item>Tercio Cerveza</item>
+        <item>Tercio Cerveza premium</item>
         <item>Caña cerveza</item>
         <item>1/5 Sin Alcohol</item>
     </string-array>
@@ -68,12 +70,12 @@
         <item>Irlandes</item>
     </string-array>
     
-    <string-array name="frio">
-        <item>Bomboncito</item>
+    <string-array name="frio"> 
         <item>Blanco y negro</item>
         <item>Ruso</item>
         <item>Nacional</item>
         <item>Marianella</item>
+        <item>Bomboncito</item>
     </string-array>
     
     <!-- Para "Especialidades" -->
@@ -105,12 +107,12 @@
         <item>Cortado</item>
         <item>Cafe con leche</item>
         <item>Carajillo</item>
-        <item>Capuchinno</item>
+        <item>Cappuccino</item>
     </string-array>
     
     <string-array name="tocados">
-        <item>Bayliss</item>
-        <item>Angelico</item>
+        <item>Crema de whisky</item>
+        <item>Licor de avellana</item>
         <item>Whisky</item>
         <item>Coñac</item>
         <item>Ron</item>
@@ -123,16 +125,18 @@
         <item>Chocolate</item>
         <item>Vainilla</item>
         <item>Fresa</item>
-        <item>Strachatella</item>
+        <item>Stracciatella</item>
         <item>Leche Merengada</item>
-        <item>Limon</item>
+        <item>Limón</item>
         <item>Mora</item>
-        <item>Platano</item>
+        <item>Plátano</item>
         <item>Nata</item>
         <item>Nutella</item>
         <item>Chocolate blanco</item>
         <item>Tutti fruti</item>
         <item>Caramelo</item>
+        <item>Tiramisu</item>
+        <item>Menta</item>
     </string-array>
     
     <string-array name="tamaño">
