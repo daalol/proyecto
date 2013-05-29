@@ -19,7 +19,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -70,20 +73,19 @@ public class Enviar extends Activity{
     	    	    Post post = new Post();
     	    	    JSONArray datos = post.getServerData(parametros, "http://192.168.0.160/pro_android/recoge_datos.php");
     	    	    if (datos != null && datos.length() > 0) {
-    	    	    	/*JSONObject json_data=datos.getJSONObject(0);
-    	    	    	String validar=json_data.getString("ok");
-    	    	    	if (validar.equalsIgnoreCase("ok")) {
-                    		Toast.makeText(getBaseContext(),"El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
-                    		Enviar.this.finish();
-                    	}*/
+    	    	    
                         JSONObject json_data = datos.getJSONObject(0); 
                         int numMesa = json_data.getInt("id_mesa");
                         	if (numMesa > 0) {
-                        		Toast.makeText(getBaseContext(),"Acierto, El pedido a sido enviado para su elaboración. ", Toast.LENGTH_SHORT).show();
+                        		Toast.makeText(getBaseContext(),"Acierto, ¡El pedido a sido enviado para su elaboración!. ", Toast.LENGTH_SHORT).show();
                         		Enviar.this.finish();
                         	}
     	    	    } else {
-                        Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT).show();
+    	    	    		if(!isOnline()){ //Compruebo si la no conexion del dispositivo a internet puede ser el problema
+    	    	    			Toast.makeText(getBaseContext(),"Error, ¡no estas conectado a internet!. ", Toast.LENGTH_SHORT).show();
+    	    	    		}
+    	    	    		else
+    	    	    			Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT).show();
                         	}
     	    	 } catch (Exception e) {
                         Toast.makeText(getBaseContext(),"Error al conectar con el servidor. ", Toast.LENGTH_SHORT).show();
@@ -166,6 +168,20 @@ public class Enviar extends Activity{
          }//Fin clase Post
 	
 	
+	//Metodo para comprobar si el dispositivo esta conectado a internet
+	public boolean isOnline() {
+		ConnectivityManager cm = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+		NetworkInfo netInfo = cm.getActiveNetworkInfo();
+
+		if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+			return true;
+		}
+
+			return false;
+		}
+	
+	
 	 // ***** Menu *****
 	 @Override
 	    public boolean onCreateOptionsMenu(Menu menu) {
@@ -180,8 +196,9 @@ public class Enviar extends Activity{
 	        	Enviar.this.finish(); //cierro la aplicacion
 	        	break;
 	        case R.id.MnuOpc2:
-	        	Intent intent2 = new Intent(Enviar.this, InstruccionesDeUso.class );
-	            startActivity(intent2);
+	        	Intent deEnviarAInstruccionesDeUso = new Intent(Enviar.this, InstruccionesDeUso.class );
+	        	deEnviarAInstruccionesDeUso.putExtra("valor", 7);
+	            startActivity(deEnviarAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
 	        	Intent intent3 = new Intent(Enviar.this, AcercaDe.class );

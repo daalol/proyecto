@@ -217,7 +217,7 @@ public class MenuPrincipal extends Activity{
 	    public boolean onOptionsItemSelected(MenuItem item) {
 	        switch (item.getItemId()) {
 	        case R.id.MnuOpc1: 
-	        	System.exit(0); //cierro la aplicacion
+	        	MenuPrincipal.this.finish(); //cierro la aplicacion
 	        	break;
 	        case R.id.MnuOpc2:
 	        	Intent deMenuPrincipalAInstruccionesDeUso = new Intent(MenuPrincipal.this, InstruccionesDeUso.class );

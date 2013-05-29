@@ -147,6 +147,7 @@ public final class R {
         public static final int instrucciones_uso_bolleria=0x7f050007;
         public static final int instrucciones_uso_cafes=0x7f050004;
         public static final int instrucciones_uso_combinados=0x7f050008;
+        public static final int instrucciones_uso_enviar=0x7f05000a;
         public static final int instrucciones_uso_especialidades=0x7f050009;
         public static final int instrucciones_uso_helados=0x7f050006;
         public static final int instrucciones_uso_refrescos=0x7f050005;

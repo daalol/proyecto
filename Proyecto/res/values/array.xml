@@ -80,6 +80,7 @@
     
     <!-- Para "Especialidades" -->
     <string-array name="gofres_brownies">
+        <item>Solo</item>
         <item>Chocolate</item>
         <item>Chocolate y Nata</item>
 		<item>Nata</item>
@@ -90,6 +91,7 @@
     </string-array>
     
     <string-array name="creppes">
+        <item>Solo</item>
         <item>Chocolate</item>
         <item>Chocolate y Nata</item>
 		<item>Nata</item>
@@ -103,9 +105,9 @@
     
     <!-- Para cafes -->
     <string-array name="cafes">
-        <item>Cafe solo</item>
+        <item>Café solo</item>
         <item>Cortado</item>
-        <item>Cafe con leche</item>
+        <item>Café con leche</item>
         <item>Carajillo</item>
         <item>Cappuccino</item>
     </string-array>

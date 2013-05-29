@@ -24,6 +24,7 @@ public class InstruccionesDeUso extends MainActivity {
         	case 4: a.setText(R.string.instrucciones_uso_bolleria);break;
         	case 5: a.setText(R.string.instrucciones_uso_combinados);break;
         	case 6: a.setText(R.string.instrucciones_uso_especialidades);break;
+        	case 7: a.setText(R.string.instrucciones_uso_enviar);break;
         	
         	default : a.setText(R.string.instrucciones_uso);
         };

@@ -60,5 +60,13 @@
         pantalla. Una vez lo tengas pulsa el botón "añadir" para que el producto sea 
         introducido en tu pedido. Si quieres salir de aquí sin pedir nada pulsa en 
         "Cancelar".</string>
+        
+       <string name="instrucciones_uso_enviar">Estas en la sección "Enviar", ya queda muy poco 
+        para poder enviar tu pedido a los camareros. Simplemente
+        introduce en la aplicación la contraseña de mesa que hay en la carta de productos. 
+        Una vez lo tengas pulsa el botón "Enviar" para que el pedido sea enviado.
+        Si quieres salir de aquí sin enviar nada pulsa en "Cancelar" y volveras al menú 
+        principal.
+        </string>
    
 </resources>
