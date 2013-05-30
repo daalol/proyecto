@@ -37,15 +37,16 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case R.id.MnuOpc1: 
-        	System.exit(0); //cierro la aplicacion
+        	MainActivity.this.finish(); //cierro la aplicacion
         	break;
         case R.id.MnuOpc2:
-        	Intent intent2 = new Intent(MainActivity.this, InstruccionesDeUso.class );
-            startActivity(intent2);
+        	Intent deMainActivityAInstruccionesDeUso = new Intent(MainActivity.this, InstruccionesDeUso.class );
+        	deMainActivityAInstruccionesDeUso.putExtra("valor", 8);
+            startActivity(deMainActivityAInstruccionesDeUso);
         	break;
         case R.id.MnuOpc3:
-        	Intent intent3 = new Intent(MainActivity.this, AcercaDe.class );
-            startActivity(intent3);
+        	Intent deMainActivityAAcercaDe = new Intent(MainActivity.this, AcercaDe.class );
+            startActivity(deMainActivityAAcercaDe);
         	break;
         	}
         return true;

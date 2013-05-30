@@ -39,7 +39,7 @@ import android.widget.Toast;
 
 public class Enviar extends Activity{
 
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,12 @@ public class Enviar extends Activity{
     	    	 parametros.add(pedido);
     	    	 parametros.add("Contrasena");
     	    	 parametros.add(editTextContraseña.getText().toString());
+    	    	 
+    	    	 
+	    	   	if(!estaOnline()){ //Compruebo si la no conexion del dispositivo a internet puede ser el problema
+	    	    		Toast.makeText(getBaseContext(),"Error, ¡no estas conectado por WIFI a la red!. ", Toast.LENGTH_SHORT).show();
+	    	    }
+	    	    else{
     	    	 // Llamada a Servidor Web PHP
     	    	 try {
     	    	    Post post = new Post();
@@ -77,24 +83,18 @@ public class Enviar extends Activity{
                         JSONObject json_data = datos.getJSONObject(0); 
                         int numMesa = json_data.getInt("id_mesa");
                         	if (numMesa > 0) {
-                        		Toast.makeText(getBaseContext(),"Acierto, ¡El pedido a sido enviado para su elaboración!. ", Toast.LENGTH_SHORT).show();
+                        		Toast.makeText(getBaseContext(),"¡El pedido a sido enviado para su elaboración!. ", Toast.LENGTH_SHORT).show();
                         		Enviar.this.finish();
                         	}
-    	    	    } else {
-    	    	    		if(!isOnline()){ //Compruebo si la no conexion del dispositivo a internet puede ser el problema
-    	    	    			Toast.makeText(getBaseContext(),"Error, ¡no estas conectado a internet!. ", Toast.LENGTH_SHORT).show();
-    	    	    		}
-    	    	    		else
-    	    	    			Toast.makeText(getBaseContext(),"Error, el pedido no a sido enviado. ", Toast.LENGTH_SHORT).show();
-                        	}
+    	    	    }
+    	    	    else Toast.makeText(getBaseContext(),"Error, el pedido no a podido ser enviado", Toast.LENGTH_SHORT).show();
     	    	 } catch (Exception e) {
                         Toast.makeText(getBaseContext(),"Error al conectar con el servidor. ", Toast.LENGTH_SHORT).show();
     	    	 					}
     	    	 	// FIN Llamada a Servidor Web PHP
+	    	    }//FIN else de llamada a servidor
     	     }
-    	 });//FIN OnClickListener
-       
-       
+    	 });//FIN OnClickListener  
 	}//Fin onCreate
 	
 	//Clase Post
@@ -168,17 +168,14 @@ public class Enviar extends Activity{
          }//Fin clase Post
 	
 	
-	//Metodo para comprobar si el dispositivo esta conectado a internet
-	public boolean isOnline() {
-		ConnectivityManager cm = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-		NetworkInfo netInfo = cm.getActiveNetworkInfo();
-
-		if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-			return true;
+	//Metodo para comprobar si el dispositivo esta conectado a Wifi
+	public boolean estaOnline() {
+		ConnectivityManager connManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+		NetworkInfo infoWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+		if (infoWifi != null && infoWifi.isConnected()) {
+		    return true;
 		}
-
-			return false;
+		return false;
 		}
 	
 	
@@ -201,8 +198,8 @@ public class Enviar extends Activity{
 	            startActivity(deEnviarAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
-	        	Intent intent3 = new Intent(Enviar.this, AcercaDe.class );
-	            startActivity(intent3);
+	        	Intent deEnviarAAcercaDe = new Intent(Enviar.this, AcercaDe.class );
+	            startActivity(deEnviarAAcercaDe);
 	        	break;
 	        	}
 	        return true;

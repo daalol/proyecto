@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class Especialidades extends Activity{
 	
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -296,8 +296,8 @@ public class Especialidades extends Activity{
 				        	startActivity(deEspecialidadesAInstruccionesDeUso);
 				        	break;
 				        case R.id.MnuOpc3:
-				        	Intent intent3 = new Intent(Especialidades.this, AcercaDe.class );
-				            startActivity(intent3);
+				        	Intent deEspecialidadesAAcercaDe = new Intent(Especialidades.this, AcercaDe.class );
+				            startActivity(deEspecialidadesAAcercaDe);
 				        	break;
 				        	}
 				        return true;

@@ -12,13 +12,4 @@
         android:layout_centerVertical="true"
         android:text="Realizar pedido" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Bienvenido!!!"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
 </RelativeLayout>

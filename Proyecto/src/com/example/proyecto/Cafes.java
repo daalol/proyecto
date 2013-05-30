@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class Cafes extends Activity {
 	
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -205,8 +205,8 @@ public class Cafes extends Activity {
 	            startActivity(deCafesAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
-	        	Intent intent3 = new Intent(Cafes.this, AcercaDe.class );
-	            startActivity(intent3);
+	        	Intent deCafesAAcercaDe = new Intent(Cafes.this, AcercaDe.class );
+	            startActivity(deCafesAAcercaDe);
 	        	break;
 	        	}
 	        return true;

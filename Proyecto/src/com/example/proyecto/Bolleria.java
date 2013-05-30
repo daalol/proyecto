@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class Bolleria extends Activity{
 
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,8 +161,8 @@ public boolean onCreateOptionsMenu(Menu menu) {
 				startActivity(deBolleriaAInstruccionesDeUso);
 				break;
 			 case R.id.MnuOpc3:
-				Intent intent3 = new Intent(Bolleria.this, AcercaDe.class );
-				startActivity(intent3);
+				Intent deBolleriaAAcercaDe = new Intent(Bolleria.this, AcercaDe.class );
+				startActivity(deBolleriaAAcercaDe);
 				break;
 			}
 		 return true;

@@ -225,8 +225,8 @@ public class MenuPrincipal extends Activity{
 	            startActivity(deMenuPrincipalAInstruccionesDeUso);
 	        	break;
 	        case R.id.MnuOpc3:
-	        	Intent intent3 = new Intent(MenuPrincipal.this, AcercaDe.class );
-	            startActivity(intent3);
+	        	Intent deMenuPrincipalAAcercaDe = new Intent(MenuPrincipal.this, AcercaDe.class );
+	            startActivity(deMenuPrincipalAAcercaDe);
 	        	break;
 	        	}
 	        return true;

@@ -144,6 +144,7 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int instrucciones_uso=0x7f050003;
+        public static final int instrucciones_uso_bienvenido=0x7f05000b;
         public static final int instrucciones_uso_bolleria=0x7f050007;
         public static final int instrucciones_uso_cafes=0x7f050004;
         public static final int instrucciones_uso_combinados=0x7f050008;

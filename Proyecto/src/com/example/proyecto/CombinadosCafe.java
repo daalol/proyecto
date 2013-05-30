@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class CombinadosCafe extends Activity{
 	
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -155,8 +155,8 @@ public class CombinadosCafe extends Activity{
 				    startActivity(deCombinadosAInstruccionesDeUso);
 				    break;
 				case R.id.MnuOpc3:
-				    Intent intent3 = new Intent(CombinadosCafe.this, AcercaDe.class );
-				    startActivity(intent3);
+				    Intent deCombinadosCafeAAcercaDe = new Intent(CombinadosCafe.this, AcercaDe.class );
+				    startActivity(deCombinadosCafeAAcercaDe);
 				    break;
 				}
 				return true;

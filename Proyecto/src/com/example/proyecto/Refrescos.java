@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class Refrescos extends Activity{
 	
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -187,8 +187,8 @@ public class Refrescos extends Activity{
 			        	startActivity(deRefrescosAIntruccionesDeUso);
 			        	break;
 			        case R.id.MnuOpc3:
-			        	Intent intent3 = new Intent(Refrescos.this, AcercaDe.class );
-			            startActivity(intent3);
+			        	Intent deRefrescosAAcercaDe = new Intent(Refrescos.this, AcercaDe.class );
+			            startActivity(deRefrescosAAcercaDe);
 			        	break;
 			        	}
 			        return true;

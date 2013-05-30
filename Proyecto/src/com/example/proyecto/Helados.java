@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 public class Helados extends Activity{
 	
-	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde aqui
+	private MenuPrincipal cerrar= new MenuPrincipal();//Para cerrar el MenuPrincipal desde esta activity
 
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
