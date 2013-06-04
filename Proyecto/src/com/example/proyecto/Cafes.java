@@ -158,7 +158,7 @@ public class Cafes extends Activity {
 					CheckBox checkTocado){
 				
 					String resultado="";
-					resultado+=spinnerCafes.getSelectedItem().toString()+" ";
+					resultado+=spinnerCafes.getSelectedItem().toString();
 					
 					if(resultado.equals("Carajillo ")){
 						resultado+="de "+spinnerTocado.getSelectedItem().toString();
