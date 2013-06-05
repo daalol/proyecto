@@ -113,21 +113,28 @@ public class Helados extends Activity{
 			Spinner tamaño,RadioButton tarrina,RadioButton cucurucho,RadioButton copa){
 		
 			final EditText cantidad= (EditText)findViewById(R.id.cantidad);
+			String cant;
+			//compruebo que no sea 0 el valor de cantidad
+			if (cantidad.getText().toString().equals("0")){
+		 		cant="Cantidad: 1";
+		 	}
+			else cant="Cantidad: "+cantidad.getText().toString();
+
 		    String formato=estaPulsado(tarrina,cucurucho,copa);
 			
 			if(formato.equals("Copa")){
 				return formato+": "+sabor1.getSelectedItem().toString()+" "
 						+sabor2.getSelectedItem().toString()+" "+sabor3.getSelectedItem().toString()
-						+". Cantidad: "+cantidad.getText().toString();
+						+", "+cant;
 			}
 			else{
 				if(sabor1.getSelectedItem().toString().equals(sabor2.getSelectedItem().toString())){
 					return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()
-							+". Cantidad: "+cantidad.getText().toString();
+							+", "+cant;
 				}
 				else {
 					return formato+", "+tamaño.getSelectedItem().toString()+", "+sabor1.getSelectedItem().toString()+" "
-					+sabor2.getSelectedItem().toString()+". Cantidad: "+cantidad.getText().toString();
+					+sabor2.getSelectedItem().toString()+", "+cant;
 				}
 			}
 		

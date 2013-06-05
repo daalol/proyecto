@@ -113,20 +113,26 @@ public class Bolleria extends Activity{
 				CheckBox checkDulce,CheckBox checkSalado){
 			
 				final EditText cantidad= (EditText)findViewById(R.id.cantidad);
-				
+				String cant;
+				//compruebo que no sea 0 el valor de cantidad
+				if (cantidad.getText().toString().equals("0")){
+			 		cant="Cantidad: 1";
+			 	}
+				else cant="Cantidad: "+cantidad.getText().toString();
+	
 		    	String formato=estaPulsado(RBDulce);
 		    	if(formato.equals("Dulce")){
 		    		if(checkDulce.isChecked()){
-		    			return spinnerDulce.getSelectedItem().toString()+", Caliente, Cantidad:"+cantidad.getText().toString();
+		    			return spinnerDulce.getSelectedItem().toString()+", Caliente, "+cant;
 		    		}
-		    		else return spinnerDulce.getSelectedItem().toString()+", Cantidad:"+cantidad.getText().toString();
+		    		else return spinnerDulce.getSelectedItem().toString()+", "+cant;
 		    	}
 		    	
 		    	else if(checkSalado.isChecked()){
-		    		return spinnerSalado.getSelectedItem().toString()+", Caliente, Cantidad:"+cantidad.getText().toString();
+		    		return spinnerSalado.getSelectedItem().toString()+", Caliente, "+cant;
 		    		}
 		    	
-		    	else return spinnerSalado.getSelectedItem().toString()+", Cantidad:"+cantidad.getText().toString();
+		    	else return spinnerSalado.getSelectedItem().toString()+", "+cant;
 		    	
 		}
 		

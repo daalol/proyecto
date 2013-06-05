@@ -178,6 +178,10 @@ public class Cafes extends Activity {
 				 	    resultado+=" "+editTextMas.getText().toString();
 					
 				 final EditText cantidad= (EditText)findViewById(R.id.cantidad);
+				 	if (cantidad.getText().toString().equals("0")){
+				 		resultado+=", Cantidad: 1";
+				 	}
+				 	else
 				        resultado+=", Cantidad: "+cantidad.getText().toString();
 				        
 				   //Devolvemos la variable resultado 

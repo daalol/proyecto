@@ -233,33 +233,40 @@ public class Especialidades extends Activity{
 				RadioButton RBBrownies){
 			
 				final EditText cantidad= (EditText)findViewById(R.id.cantidad);
+				String cant;
+				//compruebo que no sea 0 el valor de cantidad
+				if (cantidad.getText().toString().equals("0")){
+			 		cant="Cantidad: 1";
+			 	}
+				else cant="Cantidad: "+cantidad.getText().toString();
+	
 		    	String formato=estaPulsado(RBGofres,RBCreppes);
 		    	
 		    	if(formato.equals("Gofres")){
 		    		if(spinnerHelados.isShown()){
 		    			return "Gofre, "+spinnerGofres.getSelectedItem().toString()
 		    					+" de "+spinnerHelados.getSelectedItem().toString()
-			    				+". Cantidad: "+cantidad.getText().toString();
+			    				+", "+cant;
 		    		}
 		    		else return "Gofre, "+spinnerGofres.getSelectedItem().toString()
-		    				+". Cantidad: "+cantidad.getText().toString();
+		    				+", "+cant;
 		    	}
 		    	else if(formato.equals("Creppes")){
 		    		if(spinnerHelados.isShown()){
 		    			return "Creppe, "+spinnerCreppes.getSelectedItem().toString()
 		    					+" de "+spinnerHelados.getSelectedItem().toString()
-			    				+". Cantidad: "+cantidad.getText().toString();
+			    				+", "+cant;
 		    		}
 		    		else return "Creppe, "+spinnerCreppes.getSelectedItem().toString()
-		    				+". Cantidad: "+cantidad.getText().toString();
+		    				+", "+cant;
 		    	}
 		    	else if(spinnerHelados.isShown()){
 	    			return "Brownie, "+spinnerBrownies.getSelectedItem().toString()
 	    					+" de "+spinnerHelados.getSelectedItem().toString()
-		    				+". Cantidad: "+cantidad.getText().toString();
+		    				+", "+cant;
 	    		}
 	    			else return "Brownie, "+spinnerBrownies.getSelectedItem().toString()
-	    				+". Cantidad: "+cantidad.getText().toString();
+	    				+", "+cant;
 	    	
 		}
 		

@@ -109,18 +109,25 @@ public class CombinadosCafe extends Activity{
 				,RadioButton RBCaliente,CheckBox checkDescafeinado ){
 			
 				final EditText cantidad= (EditText)findViewById(R.id.cantidad);
+				String cant;
+				//compruebo que no sea 0 el valor de cantidad
+				if (cantidad.getText().toString().equals("0")){
+			 		cant="Cantidad: 1";
+			 	}
+				else cant="Cantidad: "+cantidad.getText().toString();
+				
 		    	String formato=estaPulsado(RBFrio,RBCaliente);
 		    	
 		    	if(formato.equals("Frio")){
 		    		return spinnerFrio.getSelectedItem().toString()
-		    				+". Cantidad: "+cantidad.getText().toString();
+		    				+", "+cant;
 		    	}
 		    	else if (checkDescafeinado.isChecked()){
 		    		return spinnerCaliente.getSelectedItem().toString()+". Descafeinado"
-		    				+". Cantidad: "+cantidad.getText().toString();
+		    				+", "+cant;
 		    	}
-		    	else return spinnerCaliente.getSelectedItem().toString()+". Cantidad: "
-		    				+cantidad.getText().toString();
+		    	else return spinnerCaliente.getSelectedItem().toString()+", "
+		    				+cant;
 		    			
 		}
 		

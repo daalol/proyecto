@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-05-2013 a las 23:15:26
+-- Tiempo de generación: 05-06-2013 a las 11:11:39
 -- Versión del servidor: 5.5.25a
 -- Versión de PHP: 5.4.4
 
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
   `id_mesa` int(3) NOT NULL,
   `id_pedido` int(6) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_pedido`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla que controlara los pedidos de las mesas' AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Tabla que controlara los pedidos de las mesas' AUTO_INCREMENT=21 ;
 
 --
 -- Volcado de datos para la tabla `pedidos`
@@ -82,7 +82,11 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
 
 INSERT INTO `pedidos` (`pedido`, `estado`, `id_mesa`, `id_pedido`) VALUES
 ('*** Gofre, Chocolate y Helado de Nutella. Cantidad: 1 ||| Cortado , natural , Cantidad: 1', 'nuevo', 3, 15),
-('*** Ensaimada, Cantidad:1 ||| Cafe con leche , del tiempo , Cantidad: 1', 'servido', 1, 16);
+('*** Ensaimada, Cantidad:1 ||| Cafe con leche , del tiempo , Cantidad: 1', 'servido', 1, 16),
+('*** Horchata Mixta Mediano. Cantidad: 1', 'nuevo', 1, 17),
+('*** Horchata Mixta Mediano. Cantidad: 1', 'servido', 1, 18),
+('*** Tarrina, Pequeño, Chocolate . Cantidad: 1', 'nuevo', 1, 19),
+('*** Tarrina, Pequeño, Chocolate . Cantidad: 1', 'servido', 1, 20);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
